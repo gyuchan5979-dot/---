@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>제품 안내 | 커튼·블라인드 종류별 색상 | 드리움 커튼&블라인드</title>
+    <meta name="description" content="롤·콤비·우드·알루미늄 블라인드와 암막·생활암막·쉬폰 커튼까지, 드리움의 커튼·블라인드 제품을 종류·색상·두께별로 확인하세요. 서울·경기 무료 방문 견적.">
+    <meta name="keywords" content="커튼 종류, 블라인드 종류, 롤블라인드, 콤비블라인드, 우드블라인드, 알루미늄블라인드, 암막커튼, 생활암막커튼, 쉬폰커튼, 드리움 커튼">
+
+    <meta property="og:title" content="제품 안내 | 드리움 커튼&블라인드">
+    <meta property="og:description" content="종류별·색상별로 보는 드리움의 커튼·블라인드 제품">
+    <meta property="og:image" content="https://deurium.co.kr/images/products/dimout-ivory-a.png">
+    <meta property="og:url" content="https://deurium.co.kr/products.html">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* 히어로 */
+        .products-hero {
+            padding: 90px 0 60px;
+            background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-light) 100%);
+            text-align: center;
+        }
+        .products-hero .area-badge {
+            display: inline-block; font-size: 14px; font-weight: 600;
+            color: var(--color-white); background: var(--color-primary);
+            padding: 8px 20px; border-radius: 20px; margin-bottom: 22px;
+        }
+        .products-hero h1 {
+            font-size: 40px; font-weight: 800; color: var(--color-dark);
+            line-height: 1.3; letter-spacing: -0.04em; margin-bottom: 18px;
+        }
+        .products-hero p {
+            font-size: 17px; color: var(--color-text-light); line-height: 1.7;
+        }
+        .products-hero .hover-hint {
+            display: inline-block; margin-top: 18px; font-size: 13px;
+            color: var(--color-text-light); background: var(--color-white);
+            padding: 7px 16px; border-radius: 16px; box-shadow: var(--shadow-sm);
+        }
+
+        /* 앵커 서브내비 */
+        .product-nav { background: var(--color-white); border-bottom: 1px solid var(--color-border); }
+        .product-nav .container {
+            display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+            padding: 18px 20px;
+        }
+        .product-nav a {
+            font-size: 14px; font-weight: 600; color: var(--color-text);
+            background: var(--color-cream); padding: 8px 16px; border-radius: 20px;
+            text-decoration: none; transition: var(--transition);
+        }
+        .product-nav a:hover { background: var(--color-primary); color: var(--color-white); }
+
+        /* 그룹 구분선 */
+        .group-head { text-align: center; padding: 60px 0 10px; }
+        .group-head .tag {
+            font-size: 13px; font-weight: 700; letter-spacing: 0.1em;
+            color: var(--color-primary);
+        }
+        .group-head h2 {
+            font-size: 32px; font-weight: 800; color: var(--color-dark);
+            letter-spacing: -0.04em; margin-top: 6px;
+        }
+
+        /* 제품 섹션 */
+        .product-section { padding: 44px 0; }
+        .product-section:nth-child(even) { background: var(--color-cream); }
+        .product-section-head { max-width: 760px; margin: 0 auto 28px; text-align: center; padding: 0 20px; }
+        .product-section-head h3 {
+            font-size: 24px; font-weight: 700; color: var(--color-dark);
+            letter-spacing: -0.03em; margin-bottom: 10px;
+        }
+        .product-section-head p { font-size: 15px; color: var(--color-text-light); line-height: 1.7; }
+
+        /* 그리드 */
+        .product-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            gap: 24px; max-width: 1000px; margin: 0 auto; padding: 0 20px;
+        }
+        .product-card { text-align: center; }
+        .product-thumb {
+            position: relative; width: 100%; border-radius: 14px; overflow: hidden;
+            box-shadow: var(--shadow-md); background: var(--color-light);
+        }
+        .product-thumb.r43 { aspect-ratio: 4 / 3; }
+        .product-thumb.r34 { aspect-ratio: 3 / 4; }
+        .product-thumb img {
+            position: absolute; inset: 0; width: 100%; height: 100%;
+            object-fit: cover; display: block;
+        }
+        .product-thumb .img-b { opacity: 0; transition: opacity 0.5s ease; }
+        .product-card:hover .img-b { opacity: 1; }
+        .product-card:hover .product-thumb { box-shadow: var(--shadow-lg); }
+        .product-color {
+            display: inline-block; margin-top: 14px; font-size: 15px;
+            font-weight: 600; color: var(--color-dark);
+        }
+
+        @media (max-width: 768px) {
+            .products-hero h1 { font-size: 28px; }
+            .group-head h2 { font-size: 24px; }
+            .product-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+            .product-color { font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 공통 헤더 (includes.js가 채움) -->
+    <div id="site-header"></div>
+
+    <!-- 히어로 -->
+    <section class="products-hero">
+        <div class="container">
+            <span class="area-badge">🪟 제품 안내</span>
+            <h1>커튼·블라인드 종류별 안내</h1>
+            <p>공간과 취향에 맞춰 고르는 드리움의 커튼·블라인드.<br>종류별 특징과 색상·두께를 확인해 보세요.</p>
+            <span class="hover-hint">💡 이미지에 마우스를 올리면 다른 각도로 볼 수 있어요</span>
+        </div>
+    </section>
+
+    <!-- 서브내비 -->
+    <nav class="product-nav">
+        <div class="container">
+            <a href="#roll">롤블라인드</a>
+            <a href="#combi">콤비블라인드</a>
+            <a href="#wood">우드블라인드</a>
+            <a href="#alu">알루미늄블라인드</a>
+            <a href="#blackout">암막커튼</a>
+            <a href="#dimout">생활암막커튼</a>
+            <a href="#sheer">쉬폰커튼</a>
+        </div>
+    </nav>
+
+    <!-- ===== 블라인드 ===== -->
+    <div class="group-head">
+        <p class="tag">BLINDS</p>
+        <h2>블라인드</h2>
+    </div>
+
+    <!-- 롤블라인드 -->
+    <section class="product-section" id="roll">
+        <div class="product-section-head">
+            <h3>롤블라인드</h3>
+            <p>원단 한 장이 위아래로 감기는 가장 기본적인 블라인드. 군더더기 없는 깔끔함으로 어떤 공간에도 무난하게 어울립니다.</p>
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-thumb r43">
+                    <img class="img-a" src="images/products/roll-white-a.png" alt="롤블라인드 화이트" loading="lazy">
+                    <img class="img-b" src="images/products/roll-white-b.png" alt="" aria-hidden="true" loading="lazy">
+                </div>
+                <span class="product-color">화이트</span>
+            </div>
+            <div class="product-card">
+                <div class="product-thumb r43">
+                    <img class="img-a" src="images/products/roll-grey-a.png" alt="롤블라인드 그레이" loading="lazy">
+                    <img class="img-b" src="images/products/roll-grey-b.png" alt="" aria-hidden="true" loading="lazy">
+                </div>
+                <span class="product-color">그레이</span>
+            </div>
+            <div class="product-card">
+                <div class="product-thumb r43">
+                    <img class="img-a" src="images/products/roll-beige-a.png" alt="롤블라인드 베이지" loading="lazy">
+                    <img class="img-b" src="images/products/roll-beige-b.png" alt="" aria-hidden="true" loading="lazy">
+                </div>
+                <span class="product-color">베이지</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 콤비블라인드 -->
+    <section class="product-section" id="combi">
+        <div class="product-section-head">
+            <h3>콤비블라인드</h3>
+            <p>투명·불투명 원단이 번갈아 겹쳐, 원단을 엇갈리면 채광을, 맞추면 사생활을 조절할 수 있는 스마트한 블라인드입니다.</p>
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-thumb r43">
+                    <img class="img-a" src="images/products/combi-white-a.png" alt="콤비블라인드 화이트" loading="lazy">
+                    <img class="img-b" src="images/products/combi-white-b.png" alt="" aria-hidden="true" loading="lazy">
+                </div>
+                <span class="product-color">화이트</span>
+            </div>
+            <div class="product-card">
+                <div class="product-thumb r43">
+                    <img class="img-a" src="images/products/combi-grey-a.png" alt="콤비블라인드 그레이" loading="lazy">
+                    <img class="img-b" src="images/products/combi-grey-b.png" alt="" aria-hidden="true" loading="lazy">
+                </div>
+                <span class="product-color">그레이</span>
+            </div>
+            <div class="product-card">
+                <div class="product-thumb r43">
+                    <img class="img-a" src="images/products/combi-beige-a.png" alt="콤비블라인드 베이지" loading="lazy">
+                    <img class="img-b" src="images/products/combi-beige-b.png" alt="" aria-hidden="true" loading="lazy">
+                </div>
+                <span class="product-color">베이지</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 우드블라인드 -->
+    <section class="product-section" id="wood">
+        <div class="product-section-head">
+            <h3>우드블라인드</h3>
+            <p>넓은 원목 슬랫이 만드는 고급스러운 질감과 따뜻한 분위기. 거실·서재 등 무게감 있는 공간에 잘 어울립니다.</p>
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-thumb r43">
+                    <img class="img-a" src="images/products/wood-natural-a.png" alt="우드블라인드 내추럴 우드" loading="lazy">
+                </div>
+                <span class="product-color">내추럴 우드</span>
+            </div>
+            <div class="product-card">
+                <div class="product-thumb r43">
+                    <img class="img-a" src="images/products/wood-white-a.png" alt="우드블라인드 화이트" loading="lazy">
+                    <img class="img-b" src="images/products/wood-white-b.png" alt="" aria-hidden="true" loading="lazy">
+                </div>
+                <span class="product-color">화이트</span>
+            </div>
+            <div class="product-card">
+                <div class="product-thumb r43">
+                    <img class="img-a" src="images/products/wood-walnut-a.png" alt="우드블라인드 다크 월넛" loading="lazy">
+                </div>
+                <span class="product-color">다크 월넛</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 알루미늄블라인드 -->
+    <section class="product-section" id="alu">
+        <div class="product-section-head">
+            <h3>알루미늄블라인드</h3>
+            <p>얇은 금속 슬랫으로 모던하고 깔끔한 느낌. 습기에 강해 주방·욕실 등 물기 있는 공간에 특히 적합합니다.</p>
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-thumb r43">
+                    <img class="img-a" src="images/products/alu-silver-a.png" alt="알루미늄블라인드 실버" loading="lazy">
+                    <img class="img-b" src="images/products/alu-silver-b.png" alt="" aria-hidden="true" loading="lazy">
+                </div>
+                <span class="product-color">실버</span>
+            </div>
+            <div class="product-card">
+                <div class="product-thumb r43">
+                    <img class="img-a" src="images/products/alu-white-a.png" alt="알루미늄블라인드 화이트" loading="lazy">
+                </div>
+                <span class="product-color">화이트</span>
+            </div>
+            <div class="product-card">
+                <div class="product-thumb r43">
+                    <img class="img-a" src="images/products/alu-black-a.png" alt="알루미늄블라인드 블랙" loading="lazy">
+                    <img class="img-b" src="images/products/alu-black-b.png" alt="" aria-hidden="true" loading="lazy">
+                </div>
+                <span class="product-color">블랙</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 커튼 ===== -->
+    <div class="group-head">
+        <p class="tag">CURTAINS</p>
+        <h2>커튼</h2>
+    </div>
+
+    <!-- 암막커튼 -->
+    <section class="product-section" id="blackout">
+        <div class="product-section-head">
+            <h3>암막커튼</h3>
+            <p>빛을 거의 완전히 차단해 숙면과 영화 감상에 최적. 천장 매립 레일로 창을 시원하게 덮는 시공을 기본으로 합니다.</p>
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-thumb r34">
+                    <img class="img-a" src="images/products/blackout-grey-a.png" alt="암막커튼 그레이" loading="lazy">
+                    <img class="img-b" src="images/products/blackout-grey-b.png" alt="" aria-hidden="true" loading="lazy">
+                </div>
+                <span class="product-color">그레이</span>
+            </div>
+            <div class="product-card">
+                <div class="product-thumb r34">
+                    <img class="img-a" src="images/products/blackout-navy-a.png" alt="암막커튼 네이비" loading="lazy">
+                    <img class="img-b" src="images/products/blackout-navy-b.png" alt="" aria-hidden="true" loading="lazy">
+                </div>
+                <span class="product-color">네이비</span>
+            </div>
+            <div class="product-card">
+                <div class="product-thumb r34">
+                    <img class="img-a" src="images/products/blackout-beige-a.png" alt="암막커튼 베이지" loading="lazy">
+                    <img class="img-b" src="images/products/blackout-beige-b.png" alt="" aria-hidden="true" loading="lazy">
+                </div>
+                <span class="product-color">베이지</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 생활암막커튼 -->
+    <section class="product-section" id="dimout">
+        <div class="product-section-head">
+            <h3>생활암막커튼</h3>
+            <p>은은한 채광은 살리면서 눈부심과 사생활을 가려주는 부분 차광 커튼. 거실 등 밝게 쓰고 싶은 공간에 잘 맞습니다.</p>
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-thumb r34">
+                    <img class="img-a" src="images/products/dimout-ivory-a.png" alt="생활암막커튼 아이보리" loading="lazy">
+                    <img class="img-b" src="images/products/dimout-ivory-b.png" alt="" aria-hidden="true" loading="lazy">
+                </div>
+                <span class="product-color">아이보리</span>
+            </div>
+            <div class="product-card">
+                <div class="product-thumb r34">
+                    <img class="img-a" src="images/products/dimout-grey-a.png" alt="생활암막커튼 그레이" loading="lazy">
+                    <img class="img-b" src="images/products/dimout-grey-b.png" alt="" aria-hidden="true" loading="lazy">
+                </div>
+                <span class="product-color">그레이</span>
+            </div>
+            <div class="product-card">
+                <div class="product-thumb r34">
+                    <img class="img-a" src="images/products/dimout-beige-a.png" alt="생활암막커튼 베이지" loading="lazy">
+                    <img class="img-b" src="images/products/dimout-beige-b.png" alt="" aria-hidden="true" loading="lazy">
+                </div>
+                <span class="product-color">베이지</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 쉬폰커튼 -->
+    <section class="product-section" id="sheer">
+        <div class="product-section-head">
+            <h3>쉬폰커튼</h3>
+            <p>얇고 하늘거리는 시스루 원단으로 채광과 분위기를 부드럽게. 암막·생활암막과 겹쳐 다는 레이어드 시공에 잘 어울립니다.</p>
+        </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-thumb r34">
+                    <img class="img-a" src="images/products/sheer-white-2-a.png" alt="쉬폰커튼 얇은 두께 화이트" loading="lazy">
+                    <img class="img-b" src="images/products/sheer-white-2-b.png" alt="" aria-hidden="true" loading="lazy">
+                </div>
+                <span class="product-color">얇은 쉬폰 (라이트)</span>
+            </div>
+            <div class="product-card">
+                <div class="product-thumb r34">
+                    <img class="img-a" src="images/products/sheer-white-4-a.png" alt="쉬폰커튼 도톰한 두께 화이트" loading="lazy">
+                    <img class="img-b" src="images/products/sheer-white-4-b.png" alt="" aria-hidden="true" loading="lazy">
+                </div>
+                <span class="product-color">도톰한 쉬폰 (프라이버시)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2>마음에 드는 제품이 있으신가요?</h2>
+            <p>정확한 색상과 원단은 방문 실측 시 샘플로 직접 확인하실 수 있습니다</p>
+            <div class="cta-buttons">
+                <a href="tel:010-8353-5979" class="btn btn-light">📞 전화 상담</a>
+                <a href="http://pf.kakao.com/_XXXXXX" target="_blank" class="btn btn-kakao">💬 카톡 상담</a>
+                <a href="inquiry.html" class="btn btn-primary">📋 무료 견적 신청</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 공통 푸터 (includes.js가 채움) -->
+    <div id="site-footer"></div>
+
+    <!-- 플로팅 버튼 -->
+    <div class="floating-buttons">
+        <a href="tel:010-8353-5979" class="float-btn float-phone"><span class="float-icon">📞</span><span class="float-label">전화</span></a>
+        <a href="http://pf.kakao.com/_XXXXXX" target="_blank" class="float-btn float-kakao"><span class="float-icon">💬</span><span class="float-label">카톡</span></a>
+        <a href="inquiry.html" class="float-btn float-inquiry"><span class="float-icon">📋</span><span class="float-label">견적</span></a>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/includes.js"></script>
+</body>
+</html>

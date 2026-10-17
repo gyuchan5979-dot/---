@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO 메타태그 -->
+    <title>커튼·블라인드 인테리어 팁 블로그 | 드리움 커튼&블라인드</title>
+    <meta name="description" content="커튼·블라인드 선택 가이드, 인테리어 팁, 관리법과 실제 시공 후기까지 — 드리움 커튼&블라인드 전문가가 알려주는 실용 정보를 모았습니다.">
+    <meta name="keywords" content="커튼 블로그, 블라인드 정보, 인테리어 팁, 커튼 추천, 블라인드 선택, 커튼 관리, 암막커튼, 린넨커튼, 우드블라인드, 콤비블라인드, 시공 후기, 인테리어 가이드">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="커튼·블라인드 인테리어 블로그 | 드리움">
+    <meta property="og:description" content="전문가가 알려주는 커튼·블라인드 선택 가이드와 실제 시공 후기">
+    <meta property="og:image" content="https://deurium.co.kr/images/hero-main.jpg">
+    <meta property="og:url" content="https://deurium.co.kr/blog.html">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "드리움 커튼&블라인드 인테리어 블로그",
+        "description": "커튼·블라인드 선택 가이드와 인테리어 팁",
+        "publisher": {
+            "@type": "Organization",
+            "name": "드리움 커튼&블라인드",
+            "logo": "https://deurium.co.kr/images/logo.png"
+        }
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-hero { background: var(--color-cream); padding: 80px 0 60px; text-align: center; }
+        .page-hero h1 { font-size: 42px; font-weight: 700; color: var(--color-dark); margin-bottom: 16px; }
+        .page-hero p { font-size: 17px; color: var(--color-text-light); }
+
+        .category-bar { background: var(--color-white); border-bottom: 1px solid var(--color-border); padding: 24px 0; position: sticky; top: 92px; z-index: 50; }
+        .category-list { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
+        .category-btn { padding: 10px 24px; border: 1px solid var(--color-border); background: var(--color-white); color: var(--color-text); border-radius: 30px; font-size: 14px; font-weight: 500; cursor: pointer; transition: var(--transition); }
+        .category-btn:hover { border-color: var(--color-primary); color: var(--color-primary); }
+        .category-btn.active { background: var(--color-primary); color: var(--color-white); border-color: var(--color-primary); }
+
+        .blog-section { padding: 60px 0 100px; }
+
+        .featured-section { margin-bottom: 80px; }
+        .featured-title { font-size: 22px; font-weight: 700; color: var(--color-dark); margin-bottom: 28px; display: flex; align-items: center; gap: 10px; }
+        .featured-title::before { content: "⭐"; font-size: 22px; }
+        .featured-card { display: grid; grid-template-columns: 1.4fr 1fr; gap: 0; background: var(--color-white); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-md); transition: var(--transition); cursor: pointer; border: 1px solid var(--color-border); }
+        .featured-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--color-primary); }
+        .featured-card-img { aspect-ratio: 16/10; overflow: hidden; background: var(--color-light); }
+        .featured-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .featured-card:hover .featured-card-img img { transform: scale(1.05); }
+        .featured-card-body { padding: 40px 36px; display: flex; flex-direction: column; justify-content: center; }
+        .featured-category { display: inline-block; font-size: 12px; font-weight: 600; color: var(--color-primary); background: var(--color-cream); padding: 5px 14px; border-radius: 14px; margin-bottom: 18px; align-self: flex-start; }
+        .featured-card-body h3 { font-size: 26px; font-weight: 700; color: var(--color-dark); margin-bottom: 14px; line-height: 1.35; letter-spacing: -0.04em; }
+        .featured-card-body p { font-size: 15px; color: var(--color-text-light); line-height: 1.8; margin-bottom: 20px; }
+        .featured-meta { display: flex; gap: 16px; font-size: 13px; color: var(--color-text-light); padding-top: 16px; border-top: 1px solid var(--color-border); }
+        .featured-meta span { display: flex; align-items: center; gap: 4px; }
+
+        .blog-section-title { font-size: 22px; font-weight: 700; color: var(--color-dark); margin-bottom: 28px; display: flex; align-items: center; gap: 10px; }
+        .blog-section-title::before { content: "📚"; font-size: 22px; }
+        .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+        .blog-card { background: var(--color-white); border: 1px solid var(--color-border); border-radius: 12px; overflow: hidden; transition: var(--transition); cursor: pointer; display: flex; flex-direction: column; }
+        .blog-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--color-primary); }
+        .blog-card-img { aspect-ratio: 4/3; overflow: hidden; background: var(--color-light); position: relative; }
+        .blog-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .blog-card:hover .blog-card-img img { transform: scale(1.05); }
+        .blog-card-status { position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.7); color: var(--color-white); font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 12px; letter-spacing: 0.05em; }
+        .blog-card-status.coming { background: var(--color-primary); }
+        .blog-card-status.new { background: #4CAF50; }
+        .blog-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+        .blog-card-category { display: inline-block; font-size: 11px; font-weight: 600; color: var(--color-primary); background: var(--color-cream); padding: 4px 12px; border-radius: 12px; margin-bottom: 14px; align-self: flex-start; }
+        .blog-card-body h3 { font-size: 18px; font-weight: 700; color: var(--color-dark); margin-bottom: 10px; line-height: 1.4; letter-spacing: -0.03em; }
+        .blog-card-body p { font-size: 14px; color: var(--color-text-light); line-height: 1.7; margin-bottom: 16px; flex: 1; }
+        .blog-card-meta { display: flex; justify-content: space-between; font-size: 12px; color: var(--color-text-light); padding-top: 16px; border-top: 1px solid var(--color-border); }
+
+        .info-notice { max-width: 800px; margin: 0 auto 60px; padding: 24px 28px; background: var(--color-cream); border-left: 4px solid var(--color-primary); border-radius: 8px; font-size: 14px; color: var(--color-text-light); line-height: 1.7; }
+        .info-notice strong { color: var(--color-primary); }
+
+        .subscribe-box { margin-top: 80px; padding: 56px 32px; background: var(--color-dark); color: var(--color-white); border-radius: 16px; text-align: center; }
+        .subscribe-box h3 { font-size: 28px; font-weight: 700; margin-bottom: 12px; letter-spacing: -0.03em; }
+        .subscribe-box p { font-size: 15px; opacity: 0.85; margin-bottom: 28px; line-height: 1.7; }
+
+        @media (max-width: 1024px) {
+            .blog-grid { grid-template-columns: repeat(2, 1fr); }
+            .featured-card { grid-template-columns: 1fr; }
+            .featured-card-body { padding: 32px 28px; }
+        }
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 32px; }
+            .category-bar { top: 56px; }
+            .blog-section { padding: 40px 0 60px; }
+            .featured-card-body h3 { font-size: 22px; }
+            .blog-grid { grid-template-columns: 1fr; }
+            .subscribe-box { padding: 40px 24px; }
+            .subscribe-box h3 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 공통 헤더 (includes.js가 채움) -->
+    <div id="site-header"></div>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>인테리어 블로그</h1>
+            <p>전문가가 알려주는 커튼·블라인드 선택 가이드와 실제 시공 후기</p>
+        </div>
+    </section>
+
+    <div class="category-bar">
+        <div class="container">
+            <div class="category-list">
+                <button class="category-btn active" data-filter="all">전체</button>
+                <button class="category-btn" data-filter="review">시공 후기</button>
+                <button class="category-btn" data-filter="guide">선택 가이드</button>
+                <button class="category-btn" data-filter="tip">인테리어 팁</button>
+                <button class="category-btn" data-filter="care">관리·세탁</button>
+                <button class="category-btn" data-filter="qna">자주 묻는 질문</button>
+            </div>
+        </div>
+    </div>
+
+    <section class="blog-section">
+        <div class="container">
+
+            <div class="info-notice">
+                💡 드리움 커튼&블라인드 블로그에서 <strong>커튼 선택부터 실제 시공 후기까지</strong> 실용적인 정보를 전해드립니다. 매주 정성스럽게 작성한 글을 업데이트하고 있습니다.
+            </div>
+
+            <!-- ⭐ 추천 글 (Featured) -->
+            <div class="featured-section">
+                <h2 class="featured-title">이번 주 추천 글</h2>
+                <a href="blog-8-godeok-combi.html" class="featured-card" data-cat="review" style="text-decoration: none; color: inherit;">
+                    <div class="featured-card-img">
+                        <img src="images/blog/godeok-combi-3.jpeg" alt="강동구 고덕동 안방 암막 콤비블라인드 시공 후기">
+                    </div>
+                    <div class="featured-card-body">
+                        <span class="featured-category">시공 후기</span>
+                        <h3>강동구 고덕동 안방 암막 콤비블라인드 시공 후기</h3>
+                        <p>고덕주공9단지 안방에 베이지 암막 콤비블라인드를 시공했어요. 아침 햇빛 차단과 채광 조절을 동시에 잡은 실제 시공 과정을 담았습니다.</p>
+                        <div class="featured-meta">
+                            <span>📁 시공 후기</span>
+                            <span>📅 2026.08.13</span>
+                            <span>⏱️ 4분 읽기</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 📚 전체 글 -->
+            <h2 class="blog-section-title">모든 글</h2>
+            <div class="blog-grid">
+
+                <!-- 시공 후기 (신규) -->
+                <a href="blog-14-wonjong-sheer.html" class="blog-card" data-cat="review" style="text-decoration: none; color: inherit;">
+                    <div class="blog-card-img">
+                        <img src="images/blog/wonjong-sheer-3.jpeg" alt="부천 원종동 휴튼아파트 쉬폰커튼 시공">
+                        <span class="blog-card-status new">NEW</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-card-category">시공 후기</span>
+                        <h3>부천 원종동 휴튼아파트 쉬폰커튼·롤스크린</h3>
+                        <p>거실은 두께감 있는 쉬폰커튼, 방은 롤스크린. 채광과 사생활 보호를 한 번에.</p>
+                        <div class="blog-card-meta">
+                            <span>📁 시공 후기</span>
+                            <span>📅 2026.08.26</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="blog-13-guri-curtain.html" class="blog-card" data-cat="review" style="text-decoration: none; color: inherit;">
+                    <div class="blog-card-img">
+                        <img src="images/blog/guri-curtain-1.jpeg" alt="구리시 오피스텔 샤넬 암막커튼 시공">
+                        <span class="blog-card-status new">NEW</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-card-category">시공 후기</span>
+                        <h3>구리시 오피스텔 샤넬 암막커튼 맞춤 제작</h3>
+                        <p>샷시 사이즈에 딱 맞춘 맞춤 제작으로 빛샘 없이 완성한 오피스텔 암막커튼.</p>
+                        <div class="blog-card-meta">
+                            <span>📁 시공 후기</span>
+                            <span>📅 2026.08.26</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="blog-12-doksan-curtain.html" class="blog-card" data-cat="review" style="text-decoration: none; color: inherit;">
+                    <div class="blog-card-img">
+                        <img src="images/blog/doksan-curtain-1.jpeg" alt="독산동 오피스텔 암막커튼 시공">
+                        <span class="blog-card-status new">NEW</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-card-category">시공 후기</span>
+                        <h3>독산동 오피스텔 암막커튼 (그레이·베이지)</h3>
+                        <p>거실 그레이·안방 베이지 나비주름 암막커튼. 기존 블라인드를 살린 병행 시공.</p>
+                        <div class="blog-card-meta">
+                            <span>📁 시공 후기</span>
+                            <span>📅 2026.08.25</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="blog-11-daerim-office.html" class="blog-card" data-cat="review" style="text-decoration: none; color: inherit;">
+                    <div class="blog-card-img">
+                        <img src="images/blog/daerim-office-4.jpeg" alt="대림동 사무실 콤비블라인드 시공">
+                        <span class="blog-card-status new">NEW</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-card-category">시공 후기</span>
+                        <h3>대림동 사무실 콤비블라인드 (아이스그린)</h3>
+                        <p>연창 3개 채광·시선차단을 한 번에. 여닫이창 맞춤·샷시 철판 설치 현장 노하우.</p>
+                        <div class="blog-card-meta">
+                            <span>📁 시공 후기</span>
+                            <span>📅 2026.08.25</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="blog-10-incheon-veranda.html" class="blog-card" data-cat="review" style="text-decoration: none; color: inherit;">
+                    <div class="blog-card-img">
+                        <img src="images/blog/incheon-veranda-2.jpeg" alt="인천 장수주공아파트 베란다 콤비블라인드 롤스크린 시공">
+                        <span class="blog-card-status new">NEW</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-card-category">시공 후기</span>
+                        <h3>인천 장수주공 베란다 콤비블라인드+롤스크린</h3>
+                        <p>창은 채광, 수납은 가림. 자리별로 나눠 시공하고 타공까지 퍼티로 마감.</p>
+                        <div class="blog-card-meta">
+                            <span>📁 시공 후기</span>
+                            <span>📅 2026.08.15</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="blog-9-songpa-rollscreen.html" class="blog-card" data-cat="review" style="text-decoration: none; color: inherit;">
+                    <div class="blog-card-img">
+                        <img src="images/blog/songpa-roll-3.jpeg" alt="송파구 장미아파트 자녀방 암막 롤스크린 시공">
+                        <span class="blog-card-status new">NEW</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-card-category">시공 후기</span>
+                        <h3>송파구 장미아파트 자녀방 암막 롤스크린</h3>
+                        <p>밝은 밀크색으로 분위기는 살리고, 암막으로 빛은 확실하게. 자녀방 맞춤 시공.</p>
+                        <div class="blog-card-meta">
+                            <span>📁 시공 후기</span>
+                            <span>📅 2026.08.13</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="blog-8-godeok-combi.html" class="blog-card" data-cat="review" style="text-decoration: none; color: inherit;">
+                    <div class="blog-card-img">
+                        <img src="images/blog/godeok-combi-3.jpeg" alt="강동구 고덕동 안방 암막 콤비블라인드 시공">
+                        <span class="blog-card-status new">NEW</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-card-category">시공 후기</span>
+                        <h3>강동구 고덕동 안방 암막 콤비블라인드</h3>
+                        <p>고덕주공9단지 안방에 베이지 암막 콤비블라인드. 빛 차단과 채광 조절을 한 번에.</p>
+                        <div class="blog-card-meta">
+                            <span>📁 시공 후기</span>
+                            <span>📅 2026.08.13</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 글 1 - 발행됨 -->
+                <a href="blog-1-blackout-vs-curtain.html" class="blog-card" data-cat="guide" style="text-decoration: none; color: inherit;">
+                    <div class="blog-card-img">
+                        <img src="images/cases/case-2.jpg" alt="암막커튼 vs 일반커튼 차이">
+                        <span class="blog-card-status new">NEW</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-card-category">선택 가이드</span>
+                        <h3>암막커튼 vs 일반커튼, 차이가 뭘까?</h3>
+                        <p>차광·단열·디자인 측면에서 두 가지의 차이를 비교하고, 우리 공간에 맞는 선택법을 알려드립니다.</p>
+                        <div class="blog-card-meta">
+                            <span>📁 선택 가이드</span>
+                            <span>📅 2026.05.28</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 글 2 - 발행됨 -->
+                <a href="blog-2-linen-care.html" class="blog-card" data-cat="care" style="text-decoration: none; color: inherit;">
+                    <div class="blog-card-img">
+                        <img src="images/cases/case-1.jpg" alt="린넨커튼 관리법">
+                        <span class="blog-card-status new">NEW</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-card-category">관리·세탁</span>
+                        <h3>린넨커튼 세탁·관리 꿀팁</h3>
+                        <p>천연 린넨 커튼을 오래 깨끗하게 쓰는 방법. 세탁 시 주의사항과 다림질 팁까지 모두 모았습니다.</p>
+                        <div class="blog-card-meta">
+                            <span>📁 관리·세탁</span>
+                            <span>📅 2026.05.30</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 글 3 - 발행됨 -->
+                <a href="blog-3-blind-color.html" class="blog-card" data-cat="tip" style="text-decoration: none; color: inherit;">
+                    <div class="blog-card-img">
+                        <img src="images/cases/case-3.jpg" alt="거실 블라인드 색상 가이드">
+                        <span class="blog-card-status new">NEW</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-card-category">인테리어 팁</span>
+                        <h3>거실 블라인드 색상 선택 가이드</h3>
+                        <p>벽지·가구 톤별로 어울리는 블라인드 컬러 매칭법. 인테리어가 살아나는 색상 조합을 소개합니다.</p>
+                        <div class="blog-card-meta">
+                            <span>📁 인테리어 팁</span>
+                            <span>📅 2026.05.30</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 글 4 - 발행됨 -->
+                <a href="blog-4-new-apt-timing.html" class="blog-card" data-cat="guide" style="text-decoration: none; color: inherit;">
+                    <div class="blog-card-img">
+                        <img src="images/cases/case-7.jpg" alt="신축 입주 커튼 시기">
+                        <span class="blog-card-status new">NEW</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-card-category">선택 가이드</span>
+                        <h3>신축 아파트 입주 전 커튼 견적 시기는?</h3>
+                        <p>이사 일정에 맞춰 가장 효율적으로 커튼·블라인드를 시공받는 방법. 입주 전·후 장단점을 비교합니다.</p>
+                        <div class="blog-card-meta">
+                            <span>📁 선택 가이드</span>
+                            <span>📅 2026.05.30</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 글 5 - 발행됨 -->
+                <a href="blog-5-wood-vs-combi.html" class="blog-card" data-cat="guide" style="text-decoration: none; color: inherit;">
+                    <div class="blog-card-img">
+                        <img src="images/cases/case-9.jpg" alt="우드 블라인드 vs 콤비 블라인드">
+                        <span class="blog-card-status new">NEW</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-card-category">선택 가이드</span>
+                        <h3>우드 블라인드 vs 콤비 블라인드, 어떤 게 좋을까?</h3>
+                        <p>두 가지 인기 블라인드의 장단점을 비교하고, 공간별 추천 선택법을 알려드립니다.</p>
+                        <div class="blog-card-meta">
+                            <span>📁 선택 가이드</span>
+                            <span>📅 2026.05.30</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 글 6 - 발행됨 -->
+                <a href="blog-6-baby-safe-blind.html" class="blog-card" data-cat="tip" style="text-decoration: none; color: inherit;">
+                    <div class="blog-card-img">
+                        <img src="images/cases/case-6.jpg" alt="아기방 블라인드 안전">
+                        <span class="blog-card-status new">NEW</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-card-category">인테리어 팁</span>
+                        <h3>아기 있는 집, 안전한 블라인드 고르는 법</h3>
+                        <p>줄에 의한 사고 없는 코드리스 제품부터 친환경 원단까지, 아이를 위한 안전 선택 가이드.</p>
+                        <div class="blog-card-meta">
+                            <span>📁 인테리어 팁</span>
+                            <span>📅 2026.05.30</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 글 7 - 발행됨 -->
+                <a href="blog-7-newlywed-living.html" class="blog-card" data-cat="qna" style="text-decoration: none; color: inherit;">
+                    <div class="blog-card-img">
+                        <img src="images/cases/case-5.jpg" alt="신혼집 커튼 추천">
+                        <span class="blog-card-status new">NEW</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-card-category">자주 묻는 질문</span>
+                        <h3>신혼집 거실 커튼 추천 BEST 5</h3>
+                        <p>신혼부부에게 인기 있는 거실 커튼 5가지. 분위기·실용성·가성비 모두 잡은 추천 제품.</p>
+                        <div class="blog-card-meta">
+                            <span>📁 자주 묻는 질문</span>
+                            <span>📅 2026.05.30</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- COMING SOON - 단열 커튼 -->
+                <div class="blog-card" data-cat="tip">
+                    <div class="blog-card-img">
+                        <img src="images/cases/case-8.jpg" alt="단열 효과 좋은 커튼">
+                        <span class="blog-card-status coming">COMING SOON</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-card-category">인테리어 팁</span>
+                        <h3>겨울철 단열에 좋은 커튼 종류 TOP 3</h3>
+                        <p>겨울 추위와 외풍을 막아주는 단열 커튼·블라인드. 효과적인 제품 3가지를 추천합니다.</p>
+                        <div class="blog-card-meta">
+                            <span>📁 인테리어 팁</span>
+                            <span>🚧 준비 중</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COMING SOON - 우드 블라인드 관리 -->
+                <div class="blog-card" data-cat="care">
+                    <div class="blog-card-img">
+                        <img src="images/cases/case-3.jpg" alt="우드 블라인드 관리">
+                        <span class="blog-card-status coming">COMING SOON</span>
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-card-category">관리·세탁</span>
+                        <h3>우드 블라인드 청소·관리 방법</h3>
+                        <p>천연 원목 블라인드를 오래도록 깨끗하게 유지하는 청소 팁과 주의사항을 안내합니다.</p>
+                        <div class="blog-card-meta">
+                            <span>📁 관리·세탁</span>
+                            <span>🚧 준비 중</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="subscribe-box">
+                <h3>전문가에게 직접 물어보세요</h3>
+                <p>블로그 글로 다 담을 수 없는 궁금증은 무료 견적과 함께 해결해드립니다.<br>
+                서울·경기·인천 전 지역 방문 견적 가능합니다.</p>
+                <div class="cta-buttons" style="justify-content: center;">
+                    <a href="tel:010-8353-5979" class="btn btn-light">📞 전화 상담</a>
+                    <a href="http://pf.kakao.com/_XXXXXX" target="_blank" class="btn btn-kakao">💬 카톡 상담</a>
+                    <a href="inquiry.html" class="btn btn-primary">📋 견적 신청</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 공통 푸터 (includes.js가 채움) -->
+    <div id="site-footer"></div>
+
+    <div class="floating-buttons">
+        <a href="tel:010-8353-5979" class="float-btn float-phone"><span class="float-icon">📞</span><span class="float-label">전화</span></a>
+        <a href="http://pf.kakao.com/_XXXXXX" target="_blank" class="float-btn float-kakao"><span class="float-icon">💬</span><span class="float-label">카톡</span></a>
+        <a href="inquiry.html" class="float-btn float-inquiry"><span class="float-icon">📋</span><span class="float-label">견적</span></a>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/includes.js"></script>
+    <script>
+        // 카테고리 필터
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+                document.querySelector('.featured-section').style.display = filter === 'all' ? 'block' : 'none';
+
+                document.querySelectorAll('.blog-card').forEach(card => {
+                    if (filter === 'all' || card.dataset.cat === filter) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // "COMING SOON" 카드(div)만 클릭 시 안내 — <a> 태그는 정상 이동
+        document.querySelectorAll('div.blog-card').forEach(card => {
+            card.addEventListener('click', () => {
+                alert('곧 정성스러운 글로 찾아뵙겠습니다! 🙏\n\n그동안 무료 견적 상담은 언제든 환영합니다.');
+            });
+        });
+    </script>
+</body>
+</html>

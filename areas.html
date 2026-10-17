@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>시공 지역 안내 | 서울·경기·인천 커튼·블라인드 시공 | 드리움 커튼&블라인드</title>
+    <meta name="description" content="드리움 커튼&블라인드 시공 지역 안내. 강남·서초·송파·강동·양천·강서·성동·용산·마포·서대문·영등포·동작·구로·금천 등 서울, 광명·부천·안양·시흥·분당·판교 등 경기, 부평·서구·계양·남동 등 인천까지 무료 방문 견적.">
+    <meta name="keywords" content="서울 커튼 시공, 경기 커튼 시공, 인천 커튼 시공, 강남 커튼, 성수 커튼, 한남 커튼, 마포 커튼, 여의도 커튼, 흑석 커튼, 목동 커튼, 마곡 커튼, 분당 커튼, 판교 커튼, 부평 커튼, 방문 견적 지역">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="시공 지역 안내 | 드리움 커튼&블라인드">
+    <meta property="og:description" content="서울·경기·인천 커튼·블라인드 무료 방문 견적">
+    <meta property="og:image" content="https://deurium.co.kr/images/hero-main.jpg">
+    <meta property="og:url" content="https://deurium.co.kr/areas.html">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-hero { background: var(--color-cream); padding: 80px 0 60px; text-align: center; }
+        .page-hero h1 { font-size: 42px; font-weight: 700; color: var(--color-dark); margin-bottom: 16px; }
+        .page-hero p { font-size: 17px; color: var(--color-text-light); }
+
+        .areas-section { padding: 80px 0; }
+        .area-group { margin-bottom: 60px; }
+        .area-group-title {
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--color-dark);
+            margin-bottom: 28px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid var(--color-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .area-link-card {
+            background: var(--color-white);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 28px 20px;
+            text-align: center;
+            transition: var(--transition);
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+        }
+        .area-link-card.active:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--color-primary);
+        }
+        .area-link-card.active { cursor: pointer; }
+        .area-link-card.disabled { opacity: 0.55; cursor: default; }
+        .area-link-icon { font-size: 28px; margin-bottom: 12px; }
+        .area-link-card h3 { font-size: 19px; font-weight: 700; color: var(--color-dark); margin-bottom: 6px; }
+        .area-link-card p { font-size: 13px; color: var(--color-text-light); }
+        .area-link-card .badge {
+            display: inline-block; font-size: 11px; font-weight: 600;
+            padding: 3px 10px; border-radius: 10px; margin-top: 10px;
+        }
+        .area-link-card .badge.go { background: var(--color-primary); color: var(--color-white); }
+        .area-link-card .badge.soon { background: var(--color-light); color: var(--color-text-light); }
+
+        .all-area-notice {
+            max-width: 800px; margin: 0 auto 50px; padding: 24px 28px;
+            background: var(--color-cream); border-left: 4px solid var(--color-primary);
+            border-radius: 8px; font-size: 15px; color: var(--color-text);
+            line-height: 1.7; text-align: center;
+        }
+        .all-area-notice strong { color: var(--color-primary); }
+
+        @media (max-width: 1024px) { .areas-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 32px; }
+            .areas-section { padding: 50px 0; }
+            .areas-grid { grid-template-columns: repeat(2, 1fr); }
+            .area-group-title { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 공통 헤더 (includes.js가 채움) -->
+    <div id="site-header"></div>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>시공 지역 안내</h1>
+            <p>서울·경기·인천 전 지역, 무료 방문 견적으로 찾아갑니다</p>
+        </div>
+    </section>
+
+    <section class="areas-section">
+        <div class="container">
+
+            <div class="all-area-notice">
+                💡 아래 지역 외에도 <strong>서울 전 지역·경기·인천 일부</strong>는 모두 무료 방문 견적 가능합니다.<br>
+                우리 동네가 없어도 부담 없이 <strong>전화·카톡으로 문의</strong>해주세요!
+            </div>
+
+            <!-- 서울 -->
+            <div class="area-group">
+                <h2 class="area-group-title">🏙️ 서울 지역</h2>
+                <div class="areas-grid">
+                    <a href="area-gangnam.html" class="area-link-card active">
+                        <div class="area-link-icon">📍</div>
+                        <h3>강남구</h3>
+                        <p>도곡·역삼·대치·청담</p>
+                        <span class="badge go">바로가기 →</span>
+                    </a>
+                    <a href="area-seocho.html" class="area-link-card active">
+                        <div class="area-link-icon">📍</div>
+                        <h3>서초구</h3>
+                        <p>반포·잠원·서초·방배</p>
+                        <span class="badge go">바로가기 →</span>
+                    </a>
+                    <a href="area-songpa.html" class="area-link-card active">
+                        <div class="area-link-icon">📍</div>
+                        <h3>송파구</h3>
+                        <p>잠실·문정·가락·방이</p>
+                        <span class="badge go">바로가기 →</span>
+                    </a>
+                    <a href="area-gangdong.html" class="area-link-card active">
+                        <div class="area-link-icon">📍</div>
+                        <h3>강동구</h3>
+                        <p>고덕·명일·천호·둔촌</p>
+                        <span class="badge go">바로가기 →</span>
+                    </a>
+                    <a href="area-seongdong.html" class="area-link-card active">
+                        <div class="area-link-icon">📍</div>
+                        <h3>성동구</h3>
+                        <p>성수·왕십리·옥수·금호</p>
+                        <span class="badge go">바로가기 →</span>
+                    </a>
+                    <a href="area-yongsan.html" class="area-link-card active">
+                        <div class="area-link-icon">📍</div>
+                        <h3>용산구</h3>
+                        <p>한남·이태원·이촌</p>
+                        <span class="badge go">바로가기 →</span>
+                    </a>
+                    <a href="area-mapo.html" class="area-link-card active">
+                        <div class="area-link-icon">📍</div>
+                        <h3>마포구</h3>
+                        <p>공덕·상암·연남·망원</p>
+                        <span class="badge go">바로가기 →</span>
+                    </a>
+                    <a href="area-seodaemun.html" class="area-link-card active">
+                        <div class="area-link-icon">📍</div>
+                        <h3>서대문구</h3>
+                        <p>연희·신촌·홍제·남가좌</p>
+                        <span class="badge go">바로가기 →</span>
+                    </a>
+                    <a href="area-yeongdeungpo.html" class="area-link-card active">
+                        <div class="area-link-icon">📍</div>
+                        <h3>영등포구</h3>
+                        <p>여의도·당산·문래·양평</p>
+                        <span class="badge go">바로가기 →</span>
+                    </a>
+                    <a href="area-dongjak.html" class="area-link-card active">
+                        <div class="area-link-icon">📍</div>
+                        <h3>동작구</h3>
+                        <p>흑석·상도·사당·노량진</p>
+                        <span class="badge go">바로가기 →</span>
+                    </a>
+                    <a href="area-yangcheon.html" class="area-link-card active">
+                        <div class="area-link-icon">📍</div>
+                        <h3>양천구</h3>
+                        <p>목동·신정·신월</p>
+                        <span class="badge go">바로가기 →</span>
+                    </a>
+                    <a href="area-gangseo.html" class="area-link-card active">
+                        <div class="area-link-icon">📍</div>
+                        <h3>강서구</h3>
+                        <p>마곡·화곡·가양·등촌</p>
+                        <span class="badge go">바로가기 →</span>
+                    </a>
+                    <a href="area-guro.html" class="area-link-card active">
+                        <div class="area-link-icon">📍</div>
+                        <h3>구로구</h3>
+                        <p>신도림·개봉·고척·오류</p>
+                        <span class="badge go">바로가기 →</span>
+                    </a>
+                    <a href="area-geumcheon.html" class="area-link-card active">
+                        <div class="area-link-icon">📍</div>
+                        <h3>금천구</h3>
+                        <p>가산·독산·시흥</p>
+                        <span class="badge go">바로가기 →</span>
+                    </a>
+                    <div class="area-link-card disabled">
+                        <div class="area-link-icon">📍</div>
+                        <h3>그 외 서울</h3>
+                        <p>전 지역 방문 가능</p>
+                        <span class="badge soon">문의</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 경기 -->
+            <div class="area-group">
+                <h2 class="area-group-title">🌳 경기 지역</h2>
+                <div class="areas-grid">
+                    <a href="area-gwangmyeong.html" class="area-link-card active">
+                        <div class="area-link-icon">📍</div>
+                        <h3>광명</h3>
+                        <p>철산·하안·소하</p>
+                        <span class="badge go">바로가기 →</span>
+                    </a>
+                    <a href="area-bucheon.html" class="area-link-card active">
+                        <div class="area-link-icon">📍</div>
+                        <h3>부천</h3>
+                        <p>중동·상동·송내·역곡</p>
+                        <span class="badge go">바로가기 →</span>
+                    </a>
+                    <a href="area-anyang.html" class="area-link-card active">
+                        <div class="area-link-icon">📍</div>
+                        <h3>안양</h3>
+                        <p>평촌·범계·비산·호계</p>
+                        <span class="badge go">바로가기 →</span>
+                    </a>
+                    <a href="area-siheung.html" class="area-link-card active">
+                        <div class="area-link-icon">📍</div>
+                        <h3>시흥</h3>
+                        <p>배곧·정왕·은행·대야</p>
+                        <span class="badge go">바로가기 →</span>
+                    </a>
+                    <a href="area-bundang.html" class="area-link-card active">
+                        <div class="area-link-icon">📍</div>
+                        <h3>분당</h3>
+                        <p>정자·서현·야탑·수내</p>
+                        <span class="badge go">바로가기 →</span>
+                    </a>
+                    <a href="area-pangyo.html" class="area-link-card active">
+                        <div class="area-link-icon">📍</div>
+                        <h3>판교</h3>
+                        <p>백현·삼평·운중</p>
+                        <span class="badge go">바로가기 →</span>
+                    </a>
+                    <div class="area-link-card disabled">
+                        <div class="area-link-icon">📍</div>
+                        <h3>과천·군포</h3>
+                        <p>산본 포함</p>
+                        <span class="badge soon">문의</span>
+                    </div>
+                    <div class="area-link-card disabled">
+                        <div class="area-link-icon">📍</div>
+                        <h3>그 외 경기</h3>
+                        <p>일부 지역 가능</p>
+                        <span class="badge soon">문의</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 인천 -->
+            <div class="area-group">
+                <h2 class="area-group-title">🌊 인천 지역</h2>
+                <div class="areas-grid">
+                    <a href="area-bupyeong.html" class="area-link-card active">
+                        <div class="area-link-icon">📍</div>
+                        <h3>부평구</h3>
+                        <p>부평·부개·삼산·산곡</p>
+                        <span class="badge go">바로가기 →</span>
+                    </a>
+                    <a href="area-incheon-seogu.html" class="area-link-card active">
+                        <div class="area-link-icon">📍</div>
+                        <h3>서구</h3>
+                        <p>청라·검단·가정·석남</p>
+                        <span class="badge go">바로가기 →</span>
+                    </a>
+                    <a href="area-gyeyang.html" class="area-link-card active">
+                        <div class="area-link-icon">📍</div>
+                        <h3>계양구</h3>
+                        <p>작전·계산·귤현·효성</p>
+                        <span class="badge go">바로가기 →</span>
+                    </a>
+                    <a href="area-namdong.html" class="area-link-card active">
+                        <div class="area-link-icon">📍</div>
+                        <h3>남동구</h3>
+                        <p>구월·논현·서창·간석</p>
+                        <span class="badge go">바로가기 →</span>
+                    </a>
+                    <div class="area-link-card disabled">
+                        <div class="area-link-icon">📍</div>
+                        <h3>그 외 인천</h3>
+                        <p>미추홀·연수 등</p>
+                        <span class="badge soon">문의</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2>우리 동네도 시공 가능한지 궁금하다면?</h2>
+            <p>전화나 카톡으로 편하게 문의해주세요</p>
+            <div class="cta-buttons">
+                <a href="tel:010-8353-5979" class="btn btn-light">📞 전화 상담</a>
+                <a href="http://pf.kakao.com/_XXXXXX" target="_blank" class="btn btn-kakao">💬 카톡 상담</a>
+                <a href="inquiry.html" class="btn btn-primary">📋 견적 신청</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 공통 푸터 (includes.js가 채움) -->
+    <div id="site-footer"></div>
+
+    <div class="floating-buttons">
+        <a href="tel:010-8353-5979" class="float-btn float-phone"><span class="float-icon">📞</span><span class="float-label">전화</span></a>
+        <a href="http://pf.kakao.com/_XXXXXX" target="_blank" class="float-btn float-kakao"><span class="float-icon">💬</span><span class="float-label">카톡</span></a>
+        <a href="inquiry.html" class="float-btn float-inquiry"><span class="float-icon">📋</span><span class="float-label">견적</span></a>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/includes.js"></script>
+</body>
+</html>

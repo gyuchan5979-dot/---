@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>견적 신청 완료 | 드리움 커튼&블라인드</title>
+    <meta name="robots" content="noindex">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .thanks-section {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-light) 100%);
+        }
+        .thanks-box {
+            max-width: 600px;
+            width: 100%;
+            background: var(--color-white);
+            border-radius: 20px;
+            padding: 60px 48px;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+        }
+        .thanks-icon {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 28px;
+            background: var(--color-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 44px;
+            animation: pop 0.5s ease;
+        }
+        @keyframes pop {
+            0% { transform: scale(0); }
+            70% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .thanks-box h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--color-dark);
+            margin-bottom: 16px;
+            letter-spacing: -0.04em;
+        }
+        .thanks-box .sub {
+            font-size: 17px;
+            color: var(--color-text-light);
+            line-height: 1.7;
+            margin-bottom: 36px;
+        }
+        .thanks-info {
+            background: var(--color-cream);
+            border-radius: 12px;
+            padding: 28px;
+            margin-bottom: 36px;
+            text-align: left;
+        }
+        .thanks-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 18px;
+        }
+        .thanks-info-item:last-child {
+            margin-bottom: 0;
+        }
+        .thanks-info-item .num {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            background: var(--color-primary);
+            color: var(--color-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        .thanks-info-item .text {
+            font-size: 15px;
+            color: var(--color-text);
+            line-height: 1.6;
+            padding-top: 2px;
+        }
+        .thanks-info-item .text strong {
+            color: var(--color-primary);
+            font-weight: 600;
+        }
+        .thanks-contact {
+            font-size: 14px;
+            color: var(--color-text-light);
+            margin-bottom: 32px;
+            line-height: 1.8;
+        }
+        .thanks-contact strong {
+            color: var(--color-dark);
+            font-size: 18px;
+        }
+        .thanks-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        @media (max-width: 768px) {
+            .thanks-box { padding: 44px 28px; }
+            .thanks-box h1 { font-size: 26px; }
+            .thanks-box .sub { font-size: 15px; }
+            .thanks-buttons { flex-direction: column; }
+            .thanks-buttons .btn { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 상단 알림바 -->
+    <div class="top-bar">
+        <div class="container">
+            <span class="top-item">🏠 서울·경기 전 지역 무료 방문 견적</span>
+            <span class="divider">|</span>
+            <span class="top-item">📞 010-8353-5979</span>
+            <span class="divider">|</span>
+            <span class="top-item">💬 카톡 상담 가능</span>
+        </div>
+    </div>
+
+    <!-- 헤더 -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="드리움 커튼&블라인드">
+            </a>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html">홈</a></li>
+                    <li><a href="gallery.html">시공 사례</a></li>
+                    <li><a href="index.html#types">커튼 종류</a></li>
+                    <li><a href="blog.html">블로그</a></li>
+                    <li><a href="about.html">회사 소개</a></li>
+                    <li><a href="faq.html">자주 묻는 질문</a></li>
+                    <li><a href="inquiry.html">견적 문의</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <!-- 완료 메시지 -->
+    <section class="thanks-section">
+        <div class="thanks-box">
+            <div class="thanks-icon">✓</div>
+            <h1>견적 신청이 완료되었습니다!</h1>
+            <p class="sub">소중한 문의 감사합니다.<br>드리움이 빠르게 연락드리겠습니다.</p>
+
+            <div class="thanks-info">
+                <div class="thanks-info-item">
+                    <span class="num">1</span>
+                    <span class="text"><strong>영업일 기준 24시간 내</strong> 담당자가 연락드립니다.</span>
+                </div>
+                <div class="thanks-info-item">
+                    <span class="num">2</span>
+                    <span class="text">방문 일정을 협의한 후 <strong>무료로 방문 실측</strong>해드립니다.</span>
+                </div>
+                <div class="thanks-info-item">
+                    <span class="num">3</span>
+                    <span class="text">공간에 맞는 <strong>맞춤 원단·디자인</strong>을 추천해드립니다.</span>
+                </div>
+            </div>
+
+            <p class="thanks-contact">
+                급하신 경우 바로 연락 주세요<br>
+                <strong>📞 010-8353-5979</strong>
+            </p>
+
+            <div class="thanks-buttons">
+                <a href="index.html" class="btn btn-primary">홈으로 돌아가기</a>
+                <a href="gallery.html" class="btn btn-outline">시공 사례 둘러보기</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <div id="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 class="footer-logo">드리움 커튼&블라인드</h4>
+                    <p class="footer-slogan">창에 드리운 빛,<br>공간을 디자인하다</p>
+                    <div class="footer-contact">
+                        <p>📞 010-8353-5979</p>
+                        <p>✉️ wh597979@naver.com</p>
+                        <p>🕐 연중무휴 24시 상담</p>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>바로가기</h4>
+                    <ul>
+                        <li><a href="index.html">홈</a></li>
+                        <li><a href="gallery.html">시공 사례</a></li>
+                        <li><a href="blog.html">블로그</a></li>
+                        <li><a href="about.html">회사 소개</a></li>
+                        <li><a href="faq.html">자주 묻는 질문</a></li>
+                        <li><a href="inquiry.html">견적 문의</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4><a href="areas.html" style="color:inherit;">시공 지역 →</a></h4>
+                    <p class="footer-area">서울 전 지역 · 경기 일부</p>
+					<p class="footer-keywords"><a href="area-gangnam.html">강남</a> · <a href="area-seocho.html">서초</a> · <a href="area-songpa.html">송파</a> · 강동 · 강서 · 양천 · 영등포 · 마포 · 용산 · 성동 · 광진 · 동작 · 관악 · 구로 · 금천 · 동대문 · 중랑 · 성북 · 강북 · 도봉 · 노원 · 은평 · 서대문 · 종로 · 중구 · 과천 · 안양 · 산본 · 분당 · 판교 · 광명 · 부천 · 일산</p>                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 드리움 커튼&블라인드. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 플로팅 버튼 -->
+    <div class="floating-buttons">
+        <a href="tel:010-8353-5979" class="float-btn float-phone"><span class="float-icon">📞</span><span class="float-label">전화</span></a>
+        <a href="http://pf.kakao.com/_XXXXXX" target="_blank" class="float-btn float-kakao"><span class="float-icon">💬</span><span class="float-label">카톡</span></a>
+        <a href="inquiry.html" class="float-btn float-inquiry"><span class="float-icon">📋</span><span class="float-label">견적</span></a>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/includes.js"></script>
+</body>
+</html>

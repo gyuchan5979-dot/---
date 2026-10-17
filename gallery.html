@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO 메타태그 -->
+    <title>시공 사례 | 드리움 커튼&블라인드 | 서울·경기 커튼 블라인드 전문</title>
+    <meta name="description" content="서울 강남, 서초, 송파, 영등포부터 경기 판교, 일산까지 - 드리움 커튼&블라인드 시공 사례. 린넨, 암막, 우드, 콤비 블라인드 등 거실·침실·사무실·카페 인테리어 시공 포트폴리오.">
+    <meta name="keywords" content="커튼시공, 블라인드시공, 서울커튼, 강남커튼, 서초커튼, 송파커튼, 판교커튼, 일산커튼, 분당커튼, 린넨커튼, 암막커튼, 우드블라인드, 콤비블라인드, 롤스크린, 허니콤블라인드, 시공사례, 인테리어">
+    
+    <!-- 오픈 그래프 (SNS 공유) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="시공 사례 | 드리움 커튼&블라인드">
+    <meta property="og:description" content="서울·경기 커튼·블라인드 시공 사례 - 거실, 침실, 사무실, 카페 다양한 공간의 맞춤 시공 포트폴리오">
+    <meta property="og:image" content="https://deurium.co.kr/images/hero-main.jpg">
+    <meta property="og:url" content="https://deurium.co.kr/gallery.html">
+    
+    <!-- 구조화 데이터 (Schema.org) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "드리움 커튼&블라인드",
+        "image": "https://deurium.co.kr/images/hero-main.jpg",
+        "description": "서울·경기 전 지역 커튼·블라인드 맞춤 시공 전문",
+        "telephone": "010-8353-5979",
+        "email": "wh597979@naver.com",
+        "areaServed": ["서울특별시", "경기도"],
+        "url": "https://deurium.co.kr"
+    }
+    </script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* 페이지 히어로 */
+        .page-hero {
+            background: var(--color-cream);
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        .page-hero h1 {
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--color-dark);
+            margin-bottom: 16px;
+        }
+        .page-hero p {
+            font-size: 17px;
+            color: var(--color-text-light);
+        }
+
+        /* 카테고리 필터 */
+        .filter-bar {
+            background: var(--color-white);
+            border-bottom: 1px solid var(--color-border);
+            padding: 24px 0;
+            position: sticky;
+            top: 92px;
+            z-index: 50;
+        }
+        .filter-list {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 10px 24px;
+            border: 1px solid var(--color-border);
+            background: var(--color-white);
+            color: var(--color-text);
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .filter-btn:hover {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+        }
+        .filter-btn.active {
+            background: var(--color-primary);
+            color: var(--color-white);
+            border-color: var(--color-primary);
+        }
+
+        /* 갤러리 그리드 */
+        .gallery-section {
+            padding: 60px 0 80px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+        .gallery-card {
+            background: var(--color-white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            cursor: pointer;
+            border: 1px solid var(--color-border);
+        }
+        .gallery-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--color-primary);
+        }
+        .gallery-card-img {
+            aspect-ratio: 4/3;
+            overflow: hidden;
+            background: var(--color-light);
+            position: relative;
+        }
+        .gallery-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .gallery-card:hover .gallery-card-img img {
+            transform: scale(1.05);
+        }
+        .gallery-card-info {
+            padding: 24px;
+        }
+        .gallery-tag {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--color-primary);
+            background: var(--color-cream);
+            padding: 4px 12px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+        }
+        .gallery-card-info h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--color-dark);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        .gallery-card-meta {
+            display: flex;
+            gap: 12px;
+            font-size: 13px;
+            color: var(--color-text-light);
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--color-border);
+        }
+        .gallery-card-meta span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* 모달 */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            overflow-y: auto;
+            padding: 40px 20px;
+        }
+        .modal-overlay.active {
+            display: block;
+        }
+        .modal-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--color-white);
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+            animation: modalIn 0.3s ease;
+        }
+        @keyframes modalIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.6);
+            color: var(--color-white);
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        .modal-close:hover {
+            background: rgba(0, 0, 0, 0.85);
+        }
+        .modal-img {
+            width: 100%;
+            aspect-ratio: 16/10;
+            object-fit: cover;
+        }
+        .modal-body {
+            padding: 40px;
+        }
+        .modal-tag {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--color-primary);
+            background: var(--color-cream);
+            padding: 6px 16px;
+            border-radius: 20px;
+            margin-bottom: 16px;
+        }
+        .modal-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--color-dark);
+            margin-bottom: 24px;
+            letter-spacing: -0.04em;
+        }
+        .modal-info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            padding: 24px;
+            background: var(--color-cream);
+            border-radius: 12px;
+            margin-bottom: 28px;
+        }
+        .modal-info-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .modal-info-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--color-text-light);
+            letter-spacing: 0.05em;
+        }
+        .modal-info-value {
+            font-size: 15px;
+            color: var(--color-dark);
+            font-weight: 500;
+        }
+        .modal-section {
+            margin-bottom: 24px;
+        }
+        .modal-section h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .modal-section p {
+            font-size: 15px;
+            color: var(--color-text);
+            line-height: 1.8;
+        }
+        .modal-cta {
+            display: flex;
+            gap: 12px;
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid var(--color-border);
+        }
+        .modal-cta .btn {
+            flex: 1;
+        }
+
+        /* 면책 조항 */
+        .disclaimer {
+            max-width: 900px;
+            margin: 0 auto 40px;
+            padding: 16px 20px;
+            background: var(--color-cream);
+            border-radius: 8px;
+            font-size: 13px;
+            color: var(--color-text-light);
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        @media (max-width: 1024px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .page-hero h1 {
+                font-size: 32px;
+            }
+            .filter-bar {
+                top: 56px;
+            }
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            .modal-overlay {
+                padding: 20px 12px;
+            }
+            .modal-body {
+                padding: 24px;
+            }
+            .modal-title {
+                font-size: 22px;
+            }
+            .modal-info-grid {
+                grid-template-columns: 1fr;
+                padding: 16px;
+            }
+            .modal-cta {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+   <!-- 공통 헤더 (includes.js가 채움) -->
+    <div id="site-header"></div>
+
+    <!-- 페이지 히어로 -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>시공 사례</h1>
+            <p>드리움이 작업한 다양한 공간의 시공 포트폴리오</p>
+        </div>
+    </section>
+
+    <!-- 카테고리 필터 -->
+    <div class="filter-bar">
+        <div class="container">
+            <div class="filter-list">
+                <button class="filter-btn active" data-filter="all">전체</button>
+                <button class="filter-btn" data-filter="linen">린넨 커튼</button>
+                <button class="filter-btn" data-filter="blackout">암막 커튼</button>
+                <button class="filter-btn" data-filter="wood-blind">우드 블라인드</button>
+                <button class="filter-btn" data-filter="roll-screen">롤스크린</button>
+                <button class="filter-btn" data-filter="combi-blind">콤비 블라인드</button>
+                <button class="filter-btn" data-filter="honeycomb">허니콤</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 갤러리 섹션 -->
+    <section class="gallery-section">
+        <div class="container">
+
+            <!-- 면책 조항 -->
+            <div class="disclaimer">
+                ※ 일부 이미지는 시공 분위기를 안내하기 위한 컨셉 이미지를 포함하며, 실제 시공 시 색감·디테일이 다를 수 있습니다.
+            </div>
+
+            <!-- 갤러리 그리드 - JS로 자동 생성 -->
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- 카드는 JavaScript에서 자동 생성됩니다 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 모달 -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content" id="modalContent">
+            <button class="modal-close" id="modalClose" aria-label="닫기">✕</button>
+            <img class="modal-img" id="modalImg" src="" alt="">
+            <div class="modal-body">
+                <span class="modal-tag" id="modalTag"></span>
+                <h2 class="modal-title" id="modalTitle"></h2>
+                
+                <div class="modal-info-grid">
+                    <div class="modal-info-item">
+                        <span class="modal-info-label">📍 시공 위치</span>
+                        <span class="modal-info-value" id="modalRegion"></span>
+                    </div>
+                    <div class="modal-info-item">
+                        <span class="modal-info-label">🏠 공간 유형</span>
+                        <span class="modal-info-value" id="modalSpace"></span>
+                    </div>
+                    <div class="modal-info-item">
+                        <span class="modal-info-label">📐 면적</span>
+                        <span class="modal-info-value" id="modalArea"></span>
+                    </div>
+                    <div class="modal-info-item">
+                        <span class="modal-info-label">🪟 창문 사이즈</span>
+                        <span class="modal-info-value" id="modalWindow"></span>
+                    </div>
+                    <div class="modal-info-item">
+                        <span class="modal-info-label">🧵 사용 원단</span>
+                        <span class="modal-info-value" id="modalFabric"></span>
+                    </div>
+                    <div class="modal-info-item">
+                        <span class="modal-info-label">🎨 컬러</span>
+                        <span class="modal-info-value" id="modalColor"></span>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h4>💡 고객 요청 사항</h4>
+                    <p id="modalRequest"></p>
+                </div>
+
+                <div class="modal-section">
+                    <h4>✨ 디자인 포인트</h4>
+                    <p id="modalDesign"></p>
+                </div>
+
+                <div class="modal-section">
+                    <h4>📝 시공 후기</h4>
+                    <p id="modalReview"></p>
+                </div>
+
+                <div class="modal-cta">
+                    <a href="inquiry.html" class="btn btn-primary">비슷한 견적 받기</a>
+                    <a href="tel:010-8353-5979" class="btn btn-light">📞 전화 상담</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2>당신의 공간도 드리움이 만들어드립니다</h2>
+            <p>지금 무료 방문 견적을 받아보세요</p>
+            <div class="cta-buttons">
+                <a href="tel:010-8353-5979" class="btn btn-light">📞 전화 상담</a>
+                <a href="http://pf.kakao.com/_XXXXXX" target="_blank" class="btn btn-kakao">💬 카톡 상담</a>
+                <a href="inquiry.html" class="btn btn-primary">📋 견적 신청</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <div id="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 class="footer-logo">드리움 커튼&블라인드</h4>
+                    <p class="footer-slogan">창에 드리운 빛,<br>공간을 디자인하다</p>
+                    <div class="footer-contact">
+                        <p>📞 010-8353-5979</p>
+                        <p>✉️ wh597979@naver.com</p>
+                        <p>🕐 연중무휴 24시 상담</p>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>바로가기</h4>
+                    <ul>
+                        <li><a href="index.html">홈</a></li>
+                        <li><a href="gallery.html">시공 사례</a></li>
+                        <li><a href="about.html">회사 소개</a></li>
+                        <li><a href="inquiry.html">견적 문의</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4><a href="areas.html" style="color:inherit;">시공 지역 →</a></h4>
+                    <p class="footer-area">서울 전 지역 · 경기 일부</p>
+					<p class="footer-keywords"><a href="area-gangnam.html">강남</a> · <a href="area-seocho.html">서초</a> · <a href="area-songpa.html">송파</a> · 강동 · 강서 · 양천 · 영등포 · 마포 · 용산 · 성동 · 광진 · 동작 · 관악 · 구로 · 금천 · 동대문 · 중랑 · 성북 · 강북 · 도봉 · 노원 · 은평 · 서대문 · 종로 · 중구 · 과천 · 안양 · 산본 · 분당 · 판교 · 광명 · 부천 · 일산</p>                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 드리움 커튼&블라인드. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 플로팅 버튼 -->
+    <div class="floating-buttons">
+        <a href="tel:010-8353-5979" class="float-btn float-phone"><span class="float-icon">📞</span><span class="float-label">전화</span></a>
+        <a href="http://pf.kakao.com/_XXXXXX" target="_blank" class="float-btn float-kakao"><span class="float-icon">💬</span><span class="float-label">카톡</span></a>
+        <a href="inquiry.html" class="float-btn float-inquiry"><span class="float-icon">📋</span><span class="float-label">견적</span></a>
+    </div>
+	<script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/includes.js"></script>
+    
+    <!-- 시공 사례 데이터 + 모달 로직 -->
+    <script>
+        // 시공 사례 데이터 (12개 — 나중에 진짜 사례 추가 시 여기에 객체 추가만 하면 됨)
+        const galleryData = [
+            {
+                id: 1,
+                productType: "linen",
+                productName: "린넨 커튼",
+                title: "강남구 도곡동 럭셔리 아파트 거실",
+                image: "images/cases/case-1.jpg",
+                region: "서울 강남구 도곡동",
+                space: "거실 (남향 통창)",
+                area: "40평형",
+                window: "2,400 × 2,700mm (대형 통창 2개)",
+                fabric: "벨기에산 천연 린넨",
+                color: "내추럴 아이보리",
+                request: "넓은 통창의 따뜻한 아침 햇살을 그대로 살리면서도, 외부 시선은 적절히 차단되는 부드러운 분위기를 원하셨습니다.",
+                design: "투명도 30%의 천연 린넨으로 실루엣은 보이되 내부 디테일은 비치지 않게 시공. 천장 직부 방식으로 시공하여 천고를 시각적으로 더 높여 보이게 마감했습니다.",
+                review: "거실에 들어설 때마다 햇살이 부드럽게 퍼지는 느낌이 너무 좋아요. 사진보다 실물이 훨씬 고급스러워서 만족합니다."
+            },
+            {
+                id: 2,
+                productType: "blackout",
+                productName: "암막 커튼",
+                title: "서초구 반포동 호텔식 마스터 침실",
+                image: "images/cases/case-2.jpg",
+                region: "서울 서초구 반포동",
+                space: "안방 침실",
+                area: "32평형",
+                window: "1,800 × 2,400mm (단일 창)",
+                fabric: "3중 암막 원단 (방염 처리)",
+                color: "차콜 그레이",
+                request: "재택근무가 많아 낮잠을 자주 자는데, 빛을 완벽하게 차단하고 호텔 객실 같은 무드를 원하셨습니다.",
+                design: "3중 암막 원단으로 99.9% 빛 차단. 양옆 측면까지 감싸는 리턴 시공으로 빛 새는 틈을 완전 차단. 무드 조명과 어울리는 차콜 톤으로 호텔 무드 완성.",
+                review: "오후에도 캄캄해서 숙면에 최고예요. 시공 후 잠 잘 자기 시작했습니다. 추천드려요!"
+            },
+            {
+                id: 3,
+                productType: "wood-blind",
+                productName: "우드 블라인드",
+                title: "송파구 잠실 신축 아파트 거실",
+                image: "images/cases/case-3.jpg",
+                region: "서울 송파구 잠실동",
+                space: "거실",
+                area: "45평형",
+                window: "2,100 × 2,400mm (3연동 창)",
+                fabric: "북미산 천연 바스우드 (Basswood)",
+                color: "내추럴 우드 (#NW-12)",
+                request: "원목 가구가 많은 거실에 어울리는 자연스러운 분위기의 블라인드를 원하셨습니다.",
+                design: "50mm 슬랫 너비의 천연 우드 블라인드. 가구 톤과 매치되는 내추럴 우드 컬러 선택. 햇살이 비스듬히 들어올 때 만드는 줄무늬 그림자가 거실의 무드를 살립니다.",
+                review: "원목 가구랑 톤이 너무 잘 맞아요. 빛 조절도 편하고 청소도 생각보다 쉬워서 만족입니다."
+            },
+            {
+                id: 4,
+                productType: "roll-screen",
+                productName: "롤스크린",
+                title: "마포구 상암동 재택 홈오피스",
+                image: "images/cases/case-4.jpg",
+                region: "서울 마포구 상암동",
+                space: "재택 홈오피스",
+                area: "24평형",
+                window: "1,500 × 1,800mm",
+                fabric: "친환경 PVC 프리 원단",
+                color: "오프화이트",
+                request: "재택근무 공간이라 줌 미팅 시 화면이 깨끗하게 보이도록 깔끔한 배경을 원하셨습니다. 또한 모니터에 반사광이 적게 들도록.",
+                design: "은은한 반사광까지 컨트롤할 수 있는 친환경 원단 사용. 오프화이트 컬러로 카메라 배경에 안정감을 줍니다. 줄 작동 없이 체인으로 조작하여 깔끔.",
+                review: "화상회의 배경이 너무 깔끔해 보인다고 동료들이 부러워해요. 빛 조절도 편합니다."
+            },
+            {
+                id: 5,
+                productType: "combi-blind",
+                productName: "콤비 블라인드",
+                title: "강동구 고덕동 신혼집 거실",
+                image: "images/cases/case-5.jpg",
+                region: "서울 강동구 고덕동",
+                space: "거실",
+                area: "28평형",
+                window: "1,800 × 2,100mm",
+                fabric: "지브라 원단 (이중 줄무늬)",
+                color: "베이지 + 화이트 콤비",
+                request: "신혼집에 어울리는 모던하면서도 채광 조절이 자유로운 제품을 원하셨습니다. 가성비도 고려.",
+                design: "투명·불투명 두 겹이 교차되는 콤비(지브라) 블라인드. 살짝 어긋나게 하면 부드러운 채광, 완전히 닫으면 사생활 보호. 베이지+화이트 톤으로 어떤 인테리어에도 매치.",
+                review: "신혼집 인테리어 마무리로 정말 만족합니다. 가격대비 너무 고급스러워요!"
+            },
+            {
+                id: 6,
+                productType: "honeycomb",
+                productName: "허니콤 블라인드",
+                title: "분당 정자동 아기방 + 다이닝",
+                image: "images/cases/case-6.jpg",
+                region: "경기 성남시 분당구 정자동",
+                space: "아기방 + 다이닝룸",
+                area: "33평형",
+                window: "1,200 × 1,500mm × 2",
+                fabric: "셀룰러 허니콤 원단 (이중 셀)",
+                color: "크림 화이트",
+                request: "아기방 외풍이 걱정되고, 다이닝룸은 햇살은 살리되 단열도 신경 쓰이는 상황이었습니다.",
+                design: "벌집 구조의 셀룰러 원단으로 단열·방음 효과 극대화. 위아래 양방향 작동으로 아기 손 닿지 않는 안전 시공. 크림 컬러로 부드러운 분위기.",
+                review: "확실히 창가 추위가 덜해졌어요. 아기방에 안전하게 시공해주셔서 감사합니다."
+            },
+            {
+                id: 7,
+                productType: "linen",
+                productName: "린넨 커튼",
+                title: "판교 운중동 단독주택 거실",
+                image: "images/cases/case-7.jpg",
+                region: "경기 성남시 분당구 판교 운중동",
+                space: "거실 (남향 + 동향)",
+                area: "60평형 단독주택",
+                window: "3,000 × 2,800mm (전면 통창)",
+                fabric: "프리미엄 워싱 린넨",
+                color: "웜 베이지",
+                request: "단독주택 거실의 큰 통창을 살리면서 자연스러운 드레이프감을 원하셨습니다. 마당으로 트인 공간이라 시선 차단도 필요.",
+                design: "1.8배 풍성한 주름의 워싱 린넨 커튼. 천정 직부 + 바닥까지 흘러내리는 시공으로 드라마틱한 드레이프. 마당으로의 시선은 살짝 가리되 빛은 통과.",
+                review: "주말마다 커튼 때문에 거실에 머무는 시간이 늘었어요. 정말 잘 시공해주셨습니다."
+            },
+            {
+                id: 8,
+                productType: "blackout",
+                productName: "암막 커튼",
+                title: "일산 동구 풍동 신축 아파트 침실",
+                image: "images/cases/case-8.jpg",
+                region: "경기 고양시 일산동구 풍동",
+                space: "안방 침실",
+                area: "38평형",
+                window: "1,500 × 2,400mm",
+                fabric: "2중 암막 (방염 + 단열 코팅)",
+                color: "다크 모카",
+                request: "아침 햇살에 너무 일찍 깨서 항상 피곤하셨다는 고객님. 침실 단열도 함께 고민하셨습니다.",
+                design: "2중 암막 + 단열 코팅 원단으로 빛 95% 차단 + 외풍·결로 방지. 깊이 있는 다크 모카 컬러로 침실 무드 살림.",
+                review: "주말에 푹 잘 수 있어서 너무 좋아요. 침실이 진짜 동굴 같아져서 만족합니다."
+            },
+            {
+                id: 9,
+                productType: "wood-blind",
+                productName: "우드 블라인드",
+                title: "분당 서현동 카페 인테리어",
+                image: "images/cases/case-9.jpg",
+                region: "경기 성남시 분당구 서현동",
+                space: "카페 매장 (1층)",
+                area: "25평",
+                window: "1,800 × 2,400mm × 3 (정면 큰 창)",
+                fabric: "북미산 천연 바스우드",
+                color: "다크 월넛",
+                request: "카페 분위기에 어울리는 빈티지하고 따뜻한 우드 톤을 원하셨습니다. 햇살 조절이 자유로워야 함.",
+                design: "50mm 슬랫의 다크 월넛 우드 블라인드. 햇살 강할 때 슬랫 각도로 빛 조절, 손님 시야 방해 없게. 카페 원목 가구와 톤 매치.",
+                review: "손님들이 분위기 좋다고 사진 많이 찍어가요. 인스타 핫플 됐어요 ㅎㅎ"
+            },
+            {
+                id: 10,
+                productType: "combi-blind",
+                productName: "콤비 블라인드",
+                title: "용산구 한남동 한강뷰 펜트하우스",
+                image: "images/cases/case-10.jpg",
+                region: "서울 용산구 한남동",
+                space: "거실 (한강 조망)",
+                area: "50평형 펜트하우스",
+                window: "4,500 × 2,700mm (파노라마 창)",
+                fabric: "고급 콤비 원단 (방염)",
+                color: "샴페인 골드",
+                request: "한강뷰를 가리고 싶지 않으면서도 햇살 조절이 자유로운 고급스러운 제품을 원하셨습니다.",
+                design: "프리미엄 샴페인 골드 콤비 블라인드. 투명 부분으로 한강뷰 살리고, 햇살 강할 때만 살짝 닫아 채광 조절. 전동 시스템으로 리모컨 작동.",
+                review: "한강뷰가 더 살아나요. 전동이라 편하고 무엇보다 고급스러워서 손님들이 다 부러워합니다."
+            },
+            {
+                id: 11,
+                productType: "honeycomb",
+                productName: "허니콤 + 암막",
+                title: "양천구 목동 안방 더블 시공",
+                image: "images/cases/case-11.jpg",
+                region: "서울 양천구 목동",
+                space: "안방 (이중 시공)",
+                area: "35평형",
+                window: "1,800 × 2,100mm",
+                fabric: "허니콤 + 암막 콤비",
+                color: "그레이지",
+                request: "낮엔 빛 조절, 밤엔 완벽 차광, 둘 다 원하셨던 까다로운 요청.",
+                design: "안쪽 허니콤 블라인드로 채광 조절 + 단열 / 바깥쪽 암막 커튼으로 야간 완전 차광. 더블 시공으로 모든 시간대에 맞는 무드 가능.",
+                review: "낮엔 부드럽게, 밤엔 완전히 컴컴하게. 진짜 필요한 거 다 됐어요. 추천드립니다!"
+            },
+            {
+                id: 12,
+                productType: "roll-screen",
+                productName: "롤스크린 + 린넨",
+                title: "성동구 성수동 오피스텔 원룸",
+                image: "images/cases/case-12.jpg",
+                region: "서울 성동구 성수동",
+                space: "원룸 오피스텔",
+                area: "18평형",
+                window: "1,200 × 2,400mm",
+                fabric: "롤스크린 + 시어 린넨",
+                color: "그레이 + 아이보리",
+                request: "원룸이라 공간 효율 중요. 빛 차단도 되면서 답답하지 않은 분위기를 원하셨습니다.",
+                design: "안쪽 롤스크린(차광용) + 바깥쪽 시어 린넨(분위기용) 더블 시공. 평소엔 린넨만, 잘 때만 롤스크린 내리는 방식. 원룸이지만 호텔 무드.",
+                review: "원룸이라 포기했던 인테리어인데, 너무 만족스러워요. 작은 공간도 고급스러워졌어요!"
+            }
+        ];
+
+        // 카드 자동 생성
+        const galleryGrid = document.getElementById('galleryGrid');
+        function renderCards(filter = 'all') {
+            galleryGrid.innerHTML = '';
+            const filtered = filter === 'all' 
+                ? galleryData 
+                : galleryData.filter(item => item.productType === filter);
+            
+            filtered.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'gallery-card';
+                card.dataset.id = item.id;
+                card.innerHTML = `
+                    <div class="gallery-card-img">
+                        <img src="${item.image}" alt="${item.title}">
+                    </div>
+                    <div class="gallery-card-info">
+                        <span class="gallery-tag">${item.productName}</span>
+                        <h3>${item.title}</h3>
+                        <div class="gallery-card-meta">
+                            <span>📍 ${item.region.split(' ').slice(0, 2).join(' ')}</span>
+                            <span>📐 ${item.area}</span>
+                        </div>
+                    </div>
+                `;
+                card.addEventListener('click', () => openModal(item));
+                galleryGrid.appendChild(card);
+            });
+        }
+
+        // 필터 버튼
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                renderCards(btn.dataset.filter);
+            });
+        });
+
+        // 모달 열기
+        const modalOverlay = document.getElementById('modalOverlay');
+        function openModal(item) {
+            document.getElementById('modalImg').src = item.image;
+            document.getElementById('modalImg').alt = item.title;
+            document.getElementById('modalTag').textContent = item.productName;
+            document.getElementById('modalTitle').textContent = item.title;
+            document.getElementById('modalRegion').textContent = item.region;
+            document.getElementById('modalSpace').textContent = item.space;
+            document.getElementById('modalArea').textContent = item.area;
+            document.getElementById('modalWindow').textContent = item.window;
+            document.getElementById('modalFabric').textContent = item.fabric;
+            document.getElementById('modalColor').textContent = item.color;
+            document.getElementById('modalRequest').textContent = item.request;
+            document.getElementById('modalDesign').textContent = item.design;
+            document.getElementById('modalReview').textContent = item.review;
+            
+            modalOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // URL 해시 변경 (공유 가능)
+            history.pushState(null, '', `#case-${item.id}`);
+        }
+
+        // 모달 닫기
+        function closeModal() {
+            modalOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+            history.pushState(null, '', window.location.pathname);
+        }
+        document.getElementById('modalClose').addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) closeModal();
+        });
+
+        // ESC 키로 닫기
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modalOverlay.classList.contains('active')) closeModal();
+        });
+
+        // URL 해시로 직접 열기 (공유 링크)
+        function checkHash() {
+            const hash = window.location.hash;
+            if (hash.startsWith('#case-')) {
+                const id = parseInt(hash.replace('#case-', ''));
+                const item = galleryData.find(g => g.id === id);
+                if (item) openModal(item);
+            }
+        }
+
+        // 초기 렌더링
+        renderCards();
+        checkHash();
+        window.addEventListener('popstate', checkHash);
+    </script>
+</body>
+</html>

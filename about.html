@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="드리움 커튼&블라인드 회사 소개 - 정성스러운 맞춤 시공, 친절한 상담, 합리적인 가격">
+    <title>회사 소개 | 드리움 커튼&블라인드</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-hero {
+            background: var(--color-cream);
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        .page-hero h1 {
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--color-dark);
+            margin-bottom: 16px;
+        }
+        .page-hero p {
+            font-size: 17px;
+            color: var(--color-text-light);
+        }
+
+        /* 브랜드 스토리 */
+        .brand-story {
+            padding: 100px 0;
+            text-align: center;
+        }
+        .brand-story .story-tag {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            color: var(--color-primary);
+            margin-bottom: 20px;
+        }
+        .brand-story h2 {
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--color-dark);
+            margin-bottom: 32px;
+            letter-spacing: -0.04em;
+        }
+        .brand-story .story-text {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 17px;
+            line-height: 2;
+            color: var(--color-text);
+        }
+        .brand-story .story-text p {
+            margin-bottom: 24px;
+        }
+        .brand-quote {
+            margin: 60px auto 0;
+            max-width: 600px;
+            padding: 40px;
+            background: var(--color-cream);
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--color-primary-dark);
+            line-height: 1.6;
+            letter-spacing: -0.03em;
+        }
+
+        /* 가치 섹션 */
+        .values {
+            background: var(--color-cream);
+            padding: 100px 0;
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 60px;
+        }
+        .value-card {
+            background: var(--color-white);
+            padding: 48px 32px;
+            border-radius: 12px;
+            text-align: center;
+            transition: var(--transition);
+        }
+        .value-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        .value-num {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--color-primary);
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+        }
+        .value-card h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--color-dark);
+            margin-bottom: 16px;
+        }
+        .value-card p {
+            font-size: 15px;
+            color: var(--color-text-light);
+            line-height: 1.8;
+        }
+
+        /* 시공 프로세스 상세 */
+        .process-detail {
+            padding: 100px 0;
+        }
+        .process-list {
+            max-width: 800px;
+            margin: 60px auto 0;
+        }
+        .process-row {
+            display: flex;
+            gap: 40px;
+            padding: 32px 0;
+            border-bottom: 1px solid var(--color-border);
+            align-items: flex-start;
+        }
+        .process-row:last-child {
+            border-bottom: none;
+        }
+        .process-row .step-num {
+            flex-shrink: 0;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--color-primary);
+            color: var(--color-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .process-row .step-content h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--color-dark);
+            margin-bottom: 8px;
+        }
+        .process-row .step-content p {
+            font-size: 16px;
+            color: var(--color-text-light);
+            line-height: 1.8;
+        }
+
+        /* 회사 정보 */
+        .company-info {
+            background: var(--color-dark);
+            color: var(--color-white);
+            padding: 100px 0;
+        }
+        .company-info .section-head h2 {
+            color: var(--color-white);
+        }
+        .company-info .section-head .section-tag {
+            color: var(--color-accent);
+        }
+        .info-table {
+            max-width: 700px;
+            margin: 60px auto 0;
+        }
+        .info-row {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            gap: 24px;
+        }
+        .info-row:last-child {
+            border-bottom: none;
+        }
+        .info-label {
+            font-size: 15px;
+            color: rgba(255,255,255,0.6);
+            font-weight: 500;
+        }
+        .info-value {
+            font-size: 16px;
+            color: var(--color-white);
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .brand-story, .values, .process-detail, .company-info {
+                padding: 60px 0;
+            }
+            .brand-story h2 {
+                font-size: 28px;
+            }
+            .brand-story .story-text {
+                font-size: 15px;
+            }
+            .brand-quote {
+                font-size: 18px;
+                padding: 28px;
+            }
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+            .process-row {
+                gap: 20px;
+            }
+            .process-row .step-num {
+                width: 48px;
+                height: 48px;
+                font-size: 16px;
+            }
+            .info-row {
+                grid-template-columns: 100px 1fr;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 공통 헤더 (includes.js가 채움) -->
+    <div id="site-header"></div>
+
+    <!-- 페이지 히어로 -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>드리움 이야기</h1>
+            <p>창에 드리운 빛, 공간을 디자인하다</p>
+        </div>
+    </section>
+
+    <!-- 브랜드 스토리 -->
+    <section class="brand-story">
+        <div class="container">
+            <p class="story-tag">ABOUT DEURIUM</p>
+            <h2>창문 너머 빛이<br>일상을 바꿉니다</h2>
+            <div class="story-text">
+                <p>커튼과 블라인드는 단순히 빛을 가리는 도구가 아닙니다.<br>
+                아침을 깨우는 부드러운 햇살, 저녁의 아늑한 무드,<br>
+                창문 너머의 빛이 만들어내는 모든 순간이<br>
+                우리의 일상을 더 풍요롭게 만듭니다.</p>
+
+                <p>드리움은 고객님의 공간에 가장 어울리는 빛을 디자인합니다.<br>
+                창문의 크기, 공간의 분위기, 라이프스타일까지<br>
+                꼼꼼히 살펴 맞춤 시공해드립니다.</p>
+            </div>
+
+            <div class="brand-quote">
+                "드리움은<br>창에 드리우는 결을 만듭니다"
+            </div>
+        </div>
+    </section>
+
+    <!-- 가치 -->
+    <section class="values">
+        <div class="container">
+            <div class="section-head">
+                <p class="section-tag">OUR VALUES</p>
+                <h2 class="section-title">드리움이 약속하는 것</h2>
+                <p class="section-sub">단순한 시공이 아닌, 만족스러운 경험을 드립니다</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-num">VALUE 01</div>
+                    <h3>정성스러운 시공</h3>
+                    <p>한 집 한 집 정성껏 시공합니다.<br>
+                    마감 하나, 디테일 하나 놓치지 않고<br>
+                    꼼꼼하게 완성해드립니다.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-num">VALUE 02</div>
+                    <h3>친절한 상담</h3>
+                    <p>처음 견적부터 시공 이후까지<br>
+                    궁금한 점은 언제든 편하게.<br>
+                    카톡·전화 모두 환영합니다.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-num">VALUE 03</div>
+                    <h3>합리적인 가격</h3>
+                    <p>거품 없는 정직한 견적.<br>
+                    중간 마진 없이 직접 제작·시공으로<br>
+                    합리적인 가격을 제안합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 시공 프로세스 상세 -->
+    <section class="process-detail">
+        <div class="container">
+            <div class="section-head">
+                <p class="section-tag">HOW IT WORKS</p>
+                <h2 class="section-title">시공 진행 과정</h2>
+                <p class="section-sub">견적부터 시공 완료까지, 모든 과정을 함께합니다</p>
+            </div>
+            <div class="process-list">
+                <div class="process-row">
+                    <div class="step-num">1</div>
+                    <div class="step-content">
+                        <h3>견적 신청 및 상담</h3>
+                        <p>온라인 견적 폼, 카톡, 전화 등 편한 방법으로 문의해주세요. 공간과 원하시는 분위기에 대해 친절하게 상담해드립니다.</p>
+                    </div>
+                </div>
+                <div class="process-row">
+                    <div class="step-num">2</div>
+                    <div class="step-content">
+                        <h3>방문 실측</h3>
+                        <p>전문가가 직접 방문하여 창문 크기를 정확히 측정하고, 공간 분위기에 어울리는 원단·색상·디자인을 함께 고민합니다. 서울·경기 무료 방문.</p>
+                    </div>
+                </div>
+                <div class="process-row">
+                    <div class="step-number step-num">3</div>
+                    <div class="step-content">
+                        <h3>맞춤 제작</h3>
+                        <p>실측 데이터와 선택하신 원단·색상으로 한 땀 한 땀 정성껏 제작합니다. 평균 제작 기간은 5~7일입니다.</p>
+                    </div>
+                </div>
+                <div class="process-row">
+                    <div class="step-num">4</div>
+                    <div class="step-content">
+                        <h3>전문 시공</h3>
+                        <p>제작이 완료되면 약속된 일정에 방문하여 깔끔하게 설치해드립니다. 시공 후 작동 테스트 및 사용법 안내까지 완료합니다.</p>
+                    </div>
+                </div>
+                <div class="process-row">
+                    <div class="step-num">5</div>
+                    <div class="step-content">
+                        <h3>사후 관리</h3>
+                        <p>시공 후에도 사용 중 궁금한 점이나 A/S가 필요하시면 언제든 연락주세요. 정기적인 점검 및 관리도 도와드립니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 회사 정보 -->
+    <section class="company-info">
+        <div class="container">
+            <div class="section-head">
+                <p class="section-tag">COMPANY INFO</p>
+                <h2 class="section-title">회사 정보</h2>
+            </div>
+            <div class="info-table">
+                <div class="info-row">
+                    <div class="info-label">상호</div>
+                    <div class="info-value">드리움 커튼&블라인드</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">대표</div>
+                    <div class="info-value">조규찬</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">연락처</div>
+                    <div class="info-value">010-8353-5979</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">이메일</div>
+                    <div class="info-value">wh597979@naver.com</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">시공 지역</div>
+                    <div class="info-value">서울 전 지역 · 경기 일부</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">상담 시간</div>
+                    <div class="info-value">연중무휴 24시간 (카톡·전화)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2>지금 무료 방문 견적을 받아보세요</h2>
+            <p>서울 전 지역 · 경기 일부 무료 방문 · 친절 상담</p>
+            <div class="cta-buttons">
+                <a href="tel:010-8353-5979" class="btn btn-light">📞 전화 상담</a>
+                <a href="http://pf.kakao.com/_XXXXXX" target="_blank" class="btn btn-kakao">💬 카톡 상담</a>
+                <a href="inquiry.html" class="btn btn-primary">📋 견적 신청</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <div id="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 class="footer-logo">드리움 커튼&블라인드</h4>
+                    <p class="footer-slogan">창에 드리운 빛,<br>공간을 디자인하다</p>
+                    <div class="footer-contact">
+                        <p>📞 010-8353-5979</p>
+                        <p>✉️ wh597979@naver.com</p>
+                        <p>🕐 연중무휴 24시 상담</p>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>바로가기</h4>
+                    <ul>
+                        <li><a href="index.html">홈</a></li>
+                        <li><a href="gallery.html">시공 사례</a></li>
+                        <li><a href="about.html">회사 소개</a></li>
+                        <li><a href="inquiry.html">견적 문의</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4><a href="areas.html" style="color:inherit;">시공 지역 →</a></h4>
+                    <p class="footer-area">서울 전 지역 · 경기 일부</p>
+					<p class="footer-keywords"><a href="area-gangnam.html">강남</a> · <a href="area-seocho.html">서초</a> · <a href="area-songpa.html">송파</a> · 강동 · 강서 · 양천 · 영등포 · 마포 · 용산 · 성동 · 광진 · 동작 · 관악 · 구로 · 금천 · 동대문 · 중랑 · 성북 · 강북 · 도봉 · 노원 · 은평 · 서대문 · 종로 · 중구 · 과천 · 안양 · 산본 · 분당 · 판교 · 광명 · 부천 · 일산</p>                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 드리움 커튼&블라인드. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 플로팅 버튼 -->
+    <div class="floating-buttons">
+        <a href="tel:010-8353-5979" class="float-btn float-phone"><span class="float-icon">📞</span><span class="float-label">전화</span></a>
+        <a href="http://pf.kakao.com/_XXXXXX" target="_blank" class="float-btn float-kakao"><span class="float-icon">💬</span><span class="float-label">카톡</span></a>
+        <a href="inquiry.html" class="float-btn float-inquiry"><span class="float-icon">📋</span><span class="float-label">견적</span></a>
+    </div>
+	<script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/includes.js"></script>
+</body>
+</html>
