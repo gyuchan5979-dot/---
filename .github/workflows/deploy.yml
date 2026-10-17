@@ -1,0 +1,34 @@
+# main 브랜치에 변경이 반영되면 카페24 FTP 서버로 자동 업로드합니다.
+# 필요한 저장소 Secrets: FTP_SERVER, FTP_USERNAME, FTP_PASSWORD
+# 선택 Variables: FTP_SERVER_DIR (기본값 /www/)
+name: FTP 자동 배포
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ftp-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 파일 가져오기
+        uses: actions/checkout@v4
+
+      - name: FTP 업로드 (변경된 파일만)
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ vars.FTP_SERVER_DIR || '/www/' }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            CLAUDE.md
+            README.md
