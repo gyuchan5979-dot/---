@@ -24,6 +24,8 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 50
 
       - name: Install lftp
         run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
@@ -45,15 +47,26 @@ jobs:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          BEFORE: ${{ github.event.before }}
         run: |
           umask 077
           printf 'machine %s\nlogin %s\npassword %s\n' "$FTP_SERVER" "$FTP_USERNAME" "$FTP_PASSWORD" > ~/.netrc
+          # 크기가 다른 파일 + 새 파일만 올림 (사진 280MB를 매번 다시 올리지 않도록)
+          MODE="--ignore-time"
           if [ "$DRY_RUN" = "true" ]; then
             MODE="--dry-run --ignore-time"
             echo "### 시험 실행: 실제로 올리지 않고 내용(크기)이 다른 파일만 보여줍니다"
-          else
-            MODE=""
           fi
+          # 이번 push 에서 바뀐 파일은 크기가 같아도 반드시 올림
+          CHANGED=""
+          if [ -n "$BEFORE" ] && git cat-file -e "$BEFORE" 2>/dev/null; then
+            for f in $(git diff --name-only --diff-filter=AM "$BEFORE" HEAD); do
+              case "$f" in .github/*|.claude/*|_blog/*|_build/*|_insta/*|*README.md|*.DS_Store|.git*) continue;; esac
+              d=$(dirname "$f"); [ "$d" = "." ] && d=""
+              CHANGED="$CHANGED mkdir -p -f /www/$d; put -O /www/$d $f;"
+            done
+          fi
+          [ "$DRY_RUN" = "true" ] && { echo "### 이번 push 에서 바뀐 파일: $CHANGED"; CHANGED=""; }
           lftp -e "
             set cmd:fail-exit yes;
             set ftp:ssl-allow no;
@@ -69,6 +82,7 @@ jobs:
               --exclude _blog/ --exclude _build/ --exclude _insta/ \
               --exclude-glob .DS_Store --exclude-glob README.md \
               ./ ./;
+            $CHANGED
             quit
           "
           rm -f ~/.netrc
