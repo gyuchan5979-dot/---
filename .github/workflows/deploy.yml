@@ -16,7 +16,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  DRY_RUN: "true"
+  DRY_RUN: "false"
 
 jobs:
   deploy:
