@@ -28,6 +28,18 @@ jobs:
       - name: Install lftp
         run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
 
+      - name: Check FTP settings (값은 출력하지 않음)
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          check() { v="$2"; t="$(printf '%s' "$v" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')";
+            echo "$1: 길이 ${#v}자, 앞뒤 공백 $([ "$v" = "$t" ] && echo 없음 || echo 있음), 중간 공백 $(printf '%s' "$t" | grep -q '[[:space:]]' && echo 있음 || echo 없음)"; }
+          check FTP_SERVER "$FTP_SERVER"; check FTP_USERNAME "$FTP_USERNAME"; check FTP_PASSWORD "$FTP_PASSWORD"
+          case "$FTP_SERVER" in *://*|*/) echo "FTP_SERVER 에 http:// 또는 / 가 들어 있음";; esac
+          getent hosts "$FTP_SERVER" >/dev/null && echo "FTP_SERVER 주소 확인됨" || echo "FTP_SERVER 주소를 찾을 수 없음"
+
       - name: Upload to Cafe24
         env:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
