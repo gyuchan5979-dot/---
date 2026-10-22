@@ -36,15 +36,48 @@ var COMPLETED_AREAS = {
   "관악": "area-gwanak.html",
   "노원": "area-nowon.html",
   "광진": "area-gwangjin.html",
+  "동대문": "area-dongdaemun.html",
+  "중랑": "area-jungnang.html",
+  "성북": "area-seongbuk.html",
+  "강북": "area-gangbuk.html",
+  "도봉": "area-dobong.html",
+  "은평": "area-eunpyeong.html",
+  "종로": "area-jongno.html",
+  "중구": "area-junggu.html",
+  "수원": "area-suwon.html",
+  "용인": "area-yongin.html",
+  "동탄": "area-dongtan.html",
+  "화성": "area-hwaseong.html",
+  "평촌": "area-pyeongchon.html",
+  "안산": "area-ansan.html",
+  "과천": "area-gwacheon.html",
+  "산본": "area-sanbon.html",
+  "의왕": "area-uiwang.html",
+  "하남": "area-hanam.html",
+  "위례": "area-wirye.html",
+  "남양주": "area-namyangju.html",
+  "구리": "area-guri.html",
+  "김포": "area-gimpo.html",
+  "파주": "area-paju.html",
+  "고양": "area-goyang.html",
+  "의정부": "area-uijeongbu.html",
+  "양주": "area-yangju.html",
+  "광주": "area-gwangju.html",
+  "오산": "area-osan.html",
+  "평택": "area-pyeongtaek.html",
+  "이천": "area-icheon.html",
+  "미추홀": "area-michuhol.html",
+  "영종": "area-yeongjong.html",
+  "연수": "area-yeonsu.html",
+  "일산": "area-ilsan.html",
+  "송도": "area-songdo.html",
 };
 
 /* 푸터에 노출할 전체 지역 순서 (서울 → 경기 → 인천) */
 var ALL_AREAS = [
-  "강남","서초","송파","강동","강서","양천","영등포","마포","용산","성동",
-  "광진","동작","관악","구로","금천","동대문","중랑","성북","강북","도봉",
-  "노원","은평","서대문","종로","중구",
+  "강남","서초","송파","강동","강서","양천","영등포","마포","용산","성동","광진","동작","관악","구로","금천","동대문","중랑","성북","강북","도봉","노원","은평","서대문","종로","중구","수원","용인","동탄","화성","평촌","안산","의왕","하남","위례","남양주","구리","김포","파주","고양","의정부","양주","광주","오산","평택","이천","미추홀","영종","연수",
   "광명","부천","안양","시흥","분당","판교","과천","산본","일산",
-  "부평","인천서구","계양","남동"
+  "부평","인천서구","계양","남동","송도"
 ];
 
 var areaLinks = ALL_AREAS.map(function (name) {
