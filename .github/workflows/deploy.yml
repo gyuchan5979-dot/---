@@ -1,0 +1,62 @@
+# 드리움 홈페이지 자동 배포 (카페24 FTP)
+# - 이 브랜치에 저장(push)되면 실행됩니다.
+# - DRY_RUN 이 "true" 이면 실제로 올리지 않고 "바뀔 파일 목록"만 보여줍니다.
+# - 서버에만 있는 파일은 지우지 않습니다 (추가 · 덮어쓰기만).
+# - FTP 정보는 Settings → Secrets and variables → Actions 의 FTP_SERVER / FTP_USERNAME / FTP_PASSWORD
+# - 카페24 FTP/Shell 접속설정이 "국내에서만 접속허용"이면 실패합니다 → "접속 제한 없음" 유지
+name: Deploy to Cafe24
+
+on:
+  push:
+    branches: [claude/deurium-auto-deploy]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+env:
+  DRY_RUN: "true"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install lftp
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+
+      - name: Upload to Cafe24
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          umask 077
+          printf 'machine %s\nlogin %s\npassword %s\n' "$FTP_SERVER" "$FTP_USERNAME" "$FTP_PASSWORD" > ~/.netrc
+          if [ "$DRY_RUN" = "true" ]; then
+            MODE="--dry-run --ignore-time"
+            echo "### 시험 실행: 실제로 올리지 않고 내용(크기)이 다른 파일만 보여줍니다"
+          else
+            MODE=""
+          fi
+          lftp -e "
+            set cmd:fail-exit yes;
+            set ftp:ssl-allow no;
+            set ftp:passive-mode on;
+            set ftp:use-mlsd no;
+            set net:max-retries 3;
+            set net:timeout 30;
+            open $FTP_SERVER;
+            cd /www;
+            cls -1 index.html;
+            mirror --reverse --verbose=1 --parallel=4 $MODE \
+              --exclude-glob .git* --exclude .git/ --exclude .github/ --exclude .claude/ \
+              --exclude _blog/ --exclude _build/ --exclude _insta/ \
+              --exclude-glob .DS_Store --exclude-glob README.md \
+              ./ ./;
+            quit
+          "
+          rm -f ~/.netrc
