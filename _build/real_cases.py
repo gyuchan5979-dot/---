@@ -192,6 +192,23 @@ C = [
   tags=["마포커튼","공덕동커튼","래미안5차","마포암막커튼","아이보리암막커튼","거실암막커튼","커튼자석끈"],
   area=("area-mapo.html","마포 커튼·블라인드 시공","공덕·아현·상암·합정"), prod=("blackout","암막커튼 종류 보기","빛 차단율·원단 비교"),
   cta="거실 암막커튼, 무료로 견적받아 보세요"),
+ dict(n=27, slug="banpo-trinity-combi", src="12-banpo-raemian-trinity", date="2026.10.28",
+  h1="서초 반포 래미안트리니원 시공 후기<br>베이지 콤비블라인드 집 전체, 큰 창은 두 장으로",
+  title="반포 래미안트리니원 콤비블라인드 시공 후기 | 베이지 집 전체 · 큰 창 분할 | 드리움",
+  desc="서초 반포동 래미안트리니원 거실, 안방, 방 2곳 전체를 베이지 콤비블라인드로 시공하고, 고객님 요청에 따라 큰 창은 블라인드 두 장으로 나눠 단 실제 시공 후기입니다.",
+  kw="반포 블라인드, 반포 콤비블라인드, 래미안트리니원, 래미안트리니원 블라인드, 서초 콤비블라인드, 서초구 블라인드, 베이지 콤비블라인드, 큰 창 블라인드 분할, 신축 아파트 블라인드, 드리움 커튼&블라인드",
+  cat="시공 후기 · 콤비블라인드", loc="서초 반포동 · 래미안트리니원", what="베이지 콤비블라인드 전체",
+  info=[("위치","서울 서초구 반포동 래미안트리니원"),("공간","거실 · 안방 · 방 2곳"),("제품","베이지 콤비블라인드"),("포인트","큰 창은 블라인드 두 장으로 분할")],
+  intro="이번 현장은 <strong>서초 반포동 래미안트리니원</strong>입니다. 거실, 안방, 방 두 곳까지 <strong>집 전체를 베이지 콤비블라인드</strong>로 맞췄고, 고객님 요청에 따라 큰 창은 블라인드를 두 장으로 나눠 달았어요.",
+  sec=[("거실 — 넓은 창은 나눠서 가볍게",[("A1","반포 래미안트리니원 거실 베이지 콤비블라인드","거실 콤비블라인드")],
+        ["거실 창은 폭이 넓어 여러 장으로 나눠 달았습니다. 한 장이 가벼워 올리고 내리기 편하고, 같은 베이지 원단이라 한 면처럼 이어져 보여요."]),
+       ("큰 창은 두 장으로",[("A2","반포 래미안트리니원 방 큰 창 시공 전","시공 전"),("A3","큰 창을 두 장으로 나눈 콤비블라인드","큰 창을 두 장으로 나눈 모습")],
+        ["위아래로 길고 큰 창은 고객님 요청대로 <strong>블라인드 두 장</strong>으로 나눴습니다. 필요한 쪽만 올려 바깥 풍경을 보고, 나머지는 내려 햇빛을 가릴 수 있어요."]),
+       ("안방 · 방도 같은 베이지로",[("A4","반포 래미안트리니원 안방 콤비블라인드","안방 콤비블라인드"),("A5","반포 래미안트리니원 방 콤비블라인드","방 콤비블라인드"),("B1","베이지 콤비블라인드 원단 디테일","원단 디테일")],
+        ["집 전체를 같은 베이지 원단으로 맞추니 어느 방에 들어가도 톤이 이어져 정돈돼 보여요. 원단을 겹치면 시선이, 엇갈리면 빛이 부드럽게 조절됩니다."])],
+  tags=["반포블라인드","래미안트리니원","서초콤비블라인드","반포콤비블라인드","베이지콤비블라인드","집전체블라인드","큰창블라인드"],
+  area=("area-seocho.html","서초 커튼·블라인드 시공","반포·잠원·서초·방배"), prod=("combi","콤비 블라인드 보기","줄 하나로 채광·시선 조절"),
+  cta="집 전체 콤비블라인드, 무료로 견적받아 보세요"),
 ]
 
 def img(src_dir, key, out):
@@ -261,7 +278,7 @@ def page(c):
             <div class="post-meta">
                 <span>📍 {c["loc"]}</span>
                 <span>🪟 {c["what"]}</span>
-                <span>📅 {DATE}</span>
+                <span>📅 {c.get("date", DATE)}</span>
             </div>
         </div>
     </section>
@@ -316,7 +333,7 @@ for c in reversed(C):
                         <p>{sub}</p>
                         <div class="blog-card-meta">
                             <span>📁 시공 후기</span>
-                            <span>📅 {DATE}</span>
+                            <span>📅 {c.get("date", DATE)}</span>
                         </div>
                     </div>
                 </a>''')
@@ -329,6 +346,6 @@ p = os.path.join(ROOT, "sitemap.xml"); s = open(p, encoding="utf-8").read()
 for c in C:
     loc = f'https://deurium.co.kr/blog-{c["n"]}-{c["slug"]}.html'
     if loc not in s:
-        s = s.replace("</urlset>", f"    <url>\n        <loc>{loc}</loc>\n        <lastmod>{LASTMOD}</lastmod>\n        <changefreq>monthly</changefreq>\n        <priority>0.7</priority>\n    </url>\n\n</urlset>")
+        s = s.replace("</urlset>", f"    <url>\n        <loc>{loc}</loc>\n        <lastmod>{c.get('date', DATE).replace('.', '-')}</lastmod>\n        <changefreq>monthly</changefreq>\n        <priority>0.7</priority>\n    </url>\n\n</urlset>")
 open(p, "w", encoding="utf-8").write(s)
 print("ok", len(C))
