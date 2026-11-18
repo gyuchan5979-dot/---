@@ -748,4 +748,11 @@
         <priority>0.7</priority>
     </url>
 
+    <url>
+        <loc>https://deurium.co.kr/blog-38-bupyeong-bar-velvet.html</loc>
+        <lastmod>2026-11-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
 </urlset>
