@@ -769,4 +769,11 @@
         <priority>0.7</priority>
     </url>
 
+    <url>
+        <loc>https://deurium.co.kr/blog-41-pyeongtaek-bach-whole.html</loc>
+        <lastmod>2026-11-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
 </urlset>
